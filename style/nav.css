@@ -2,21 +2,29 @@
     padding: 10px; /* Espaçamento interno */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
     color: white;
-    background-image: linear-gradient(to right, #1C0436, #6A0572); /* Define um gradiente de fundo */
-    padding: 10px; /* Adiciona preenchimento ao redor do cabeçalho */
+    background-image: linear-gradient(to right, #1C0436, #6A0572); /* Define um gradiente de fundo */ 
     border-radius: 15px; /* Adiciona bordas arredondadas */
     justify-content: center;
-    width: 99.5%;
-}
-.navbar-custom .navbar-brand {
+    width: 100%; /* Ajuste para preencher a largura total */
     font-weight: bold; /* Peso da fonte */
-}
-.navbar-custom .navbar-nav .nav-link {
-    font-weight: bold; /* Peso da fonte */
-    margin-right: 10px; /* Espaçamento entre os links */
-    
+    position: fixed; /* Fixa a navbar */
+    bottom: 0; /* Alinha na parte inferior */
+    left: 0; /* Alinha à esquerda */
+    z-index: 999; /* Define a ordem de empilhamento */
 }
 
-.nav-item a{
-    color: #fff;
+
+
+/* Cor dos links na barra de navegação */
+.navbar-custom .nav-item .nav-link {
+    margin-right: 10px;
+    color: #ffffff; /* Cor do texto dos links */
+}
+
+.navbar-custom .nav-item .nav-link:hover {
+    color: #000; /* Cor do texto dos links ao passar o mouse */
+}
+
+.btn-custom{
+    background-color: #6A0572;
 }
