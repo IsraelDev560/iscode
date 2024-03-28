@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -15,7 +18,7 @@ body{
 
 
 /* Estilos para o container */
-.container {
+.container-init {
     max-width: 1200px;
     margin: 60px auto;
     padding: 40px 20px;
@@ -44,17 +47,24 @@ body{
     text-align: center; /* Centraliza a imagem */
 }
 
+.image img{
+    width: 100%;
+    height: auto;
+}
+
 /* Estilos para o título */
-.container h1 {
+.container-init h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
 /* Estilos para o parágrafo */
-.container p {
+.container-init p {
     font-size: 1.6em;
     margin-bottom: 30px;
 }
+
+
 
 .title-skills {
     text-align: center;
@@ -192,14 +202,11 @@ body{
 
 /* Estilos para a imagem dentro do container */
 
-
-
-
 main h1{
     text-align: center;
     font-weight: bold;
     position: relative;
-    top: 50px;
+    top: 10px;
 }
 
 .card {
@@ -295,10 +302,50 @@ main h1{
     margin-top: 12px;
 }
 
-@media (max-width: 768px) {
-    .skill {
-        width: 100%;
-        max-width: 350px; /* Largura máxima para cada habilidade */
-        margin-bottom: 20px;
+/* Estilos para dispositivos de tela menores, como tablets e smartphones */
+@media only screen and (max-width: 768px) {
+    .container-init {
+        max-width: 100%; /* Altera a largura máxima para 100% */
+        margin: 20px auto; /* Ajusta a margem */
+        padding: 20px; /* Ajusta o preenchimento */
+    }
+
+    .skills{
+        width: 98%;
+    }
+
+    .skill-content{
+        margin-left: 10px;
+    }
+
+    .title-skills h3 {
+        top: 100px; /* Ajusta a posição do título de habilidades */
+        font-size: 30px; /* Reduz o tamanho do título */
+    }
+
+    .contact-section {
+        width: 90%; /* Ajusta a largura da seção de contato */
+        margin: 20px auto; /* Centraliza horizontalmente */
+        padding: 20px; /* Adiciona preenchimento */
+    }
+
+    .card {
+        width: 90%; /* Ajusta a largura dos cards */
+        margin: 10px 5px; /* Centraliza os cards */
+    }
+
+    .navbar-custom {
+        position: relative; /* Altera a posição para relativa */
+        bottom: auto; /* Remove o posicionamento fixo na parte inferior */
+        left: auto; /* Remove o posicionamento fixo na lateral esquerda */
+        width: auto; /* Define a largura automática */
+    }
+}
+
+/* Define configurações para dispositivos muito pequenos, como smartphones em modo paisagem */
+@media only screen and (max-width: 480px) {
+    .title-skills h3 {
+        top: 50px; /* Ajusta a posição do título de habilidades */
+        font-size: 25px; /* Reduz o tamanho do título */
     }
 }
