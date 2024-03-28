@@ -5,23 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iSCode</title>
-    <link rel="icon" href="img/logo.png">
-    <link rel="stylesheet" href="style/nav.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="img/logo.png"> <!-- Ícone da aba do navegador -->
+    <link rel="stylesheet" href="style/nav.css"> <!-- Estilos da barra de navegação -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!-- Estilos do Bootstrap -->
+    <link rel="stylesheet" href="style/style.css"> <!-- Estilos personalizados -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> <!-- Fonte personalizada -->
 </head>
 
 <body>
+    <!-- Barra de navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
+        <!-- Marca da navegação (logo ou texto) -->
         <a class="navbar-brand" href="#">iSCode</a>
+        <!-- Botão de alternância para telas pequenas -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Itens da navegação -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
+                <!-- Links da navegação -->
                 <li class="nav-item active">
                     <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
                 </li>
@@ -38,23 +44,31 @@
         </div>
     </nav>
 
+    <!-- Cabeçalho -->
     <header>
-        <div class="container" id="home">
+        <!-- Seção de introdução -->
+        <div class="container-init" id="home">
             <div class="texto">
+                <!-- Título e texto de introdução -->
                 <h1>Olá, eu me chamo Israel Santos</h1>
                 <p>Desenvolvedor Web</p>
                 <h3>Se está em busca de um Programador de websites com experiência,
                     você veio ao lugar certo. Forneço serviços de programação de alta qualidade,
-                    HTML/CSS Java Script, PHP, ajudo os meus clientes a criarem plataformas digitais
+                    HTML5/CSS3, JavaScript, PHP, ajudo os meus clientes a criarem plataformas digitais
                     elegantes e eficientes.</h3>
             </div>
             <div class="image">
+                <!-- Imagem de introdução -->
                 <img width="400" src="img/profile-pic.png" alt="">
             </div>
         </div>
+         <!-- Seção de habilidades -->
         <div class="title-skills" id="sobre">
+            <!-- Título da seção de habilidades -->
             <h3>Meus conhecimentos em Softwares</h3>
-            <div class="skills" >
+            <div class="skills">
+            <!-- Habilidades e barras de progresso -->
+            <!-- Cada habilidade possui uma barra de progresso -->
                 <div class="skill">
                     <div class="skill-content">
                         <div class="text">
@@ -118,9 +132,11 @@
     </header>
 
     <main id="projetos">
+        <!-- Seção De Projetos -->
         <h1>PROJETOS</h1>
-
+        <!-- Cards de projetos -->
         <div class="container d-flex justify-content-center">
+             <!-- Cada card representa um projeto -->
             <div class="card">
                 <img src="img/ortolab.png" alt="OrtoLab">
                 <div class="card-body">
@@ -139,29 +155,35 @@
                 </div>
             </div>
     </main>
-    <div class="texts-contact" id="contato">
-    <h5 class="contact-subtitle">CONTATO</h5>
-    <h2 class="contact-title">Fale Comigo</h2>
     <!-- Espaço de Contato -->
-    <div class="contact-section">
-        <p>Se você estiver interessado no meu trabalho ou tiver alguma dúvida, sinta-se à vontade para entrar em contato comigo.</p>
-       
-        <p>Além disso, você pode me encontrar nas redes sociais:</p>
-        
-           <a href="https://www.linkedin.com/in/israelsantoss"><img width="50" src="img/linkedin.png" alt="linkedin"></a>
-           <a href="https://www.instagram.com/is.codess/"><img width="50" src="img/insta.png" alt="Instagram"></a>
-           <a href="tel:+5575991715274"><img width="50" src="img/whatsapp.webp" alt="WhatsApp"></a>
-        
-    </div>    
+    <div class="texts-contact" id="contato">
+        <!-- Subtítulo da seção de contato -->
+        <h5 class="contact-subtitle">CONTATO</h5>
+        <!-- Título da seção de contato -->
+        <h2 class="contact-title">Fale Comigo</h2>
+        <!-- Informações de contato -->
+        <div class="contact-section">
+            <p>Se você estiver interessado no meu trabalho ou tiver alguma dúvida, sinta-se à vontade para entrar em
+                contato comigo.</p>
 
-    <footer id="rodape">
-        <p class="rodapep">© 2024 iSCode. Todos os direitos reservados. Desenvolvido por Israel.</p>
-    </footer>
-</div>
-    <script src="js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <p>Além disso, você pode me encontrar nas redes sociais:</p>
+
+            <a href="https://www.linkedin.com/in/israelsantoss"><img width="50" src="img/linkedin.png"
+                    alt="linkedin"></a>
+            <a href="https://www.instagram.com/is.codess/"><img width="50" src="img/insta.png" alt="Instagram"></a>
+            <a href="tel:+5575991715274"><img width="50" src="img/whatsapp.webp" alt="WhatsApp"></a>
+
+        </div>
+        <!-- Rodapé -->
+        <footer id="rodape">
+            <p class="rodapep">© 2024 iSCode. Todos os direitos reservados. Desenvolvido por Israel.</p>
+        </footer>
+    </div>
+    <!-- Scripts -->
+
+    <script src="js/main.js"></script> <!-- Scripts personalizados -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script> <!-- Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Bootstrap JS -->
 </body>
-
 </html>
