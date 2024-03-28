@@ -1,0 +1,22 @@
+.navbar-custom {
+    padding: 10px; /* Espaçamento interno */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    color: white;
+    background-image: linear-gradient(to right, #1C0436, #6A0572); /* Define um gradiente de fundo */
+    padding: 10px; /* Adiciona preenchimento ao redor do cabeçalho */
+    border-radius: 15px; /* Adiciona bordas arredondadas */
+    justify-content: center;
+    width: 99.5%;
+}
+.navbar-custom .navbar-brand {
+    font-weight: bold; /* Peso da fonte */
+}
+.navbar-custom .navbar-nav .nav-link {
+    font-weight: bold; /* Peso da fonte */
+    margin-right: 10px; /* Espaçamento entre os links */
+    
+}
+
+.nav-item a{
+    color: #fff;
+}
