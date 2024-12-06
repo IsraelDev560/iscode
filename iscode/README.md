@@ -1,17 +1,15 @@
 ### Olá! eu sou o Israel🖐️
 
-<h4>Sou um Desenvolvedor Full Stack 💻</h4>
+<h3>Sou um Desenvolvedor Full Stack 💻</h3>
 
-
+<div style="flex">
 🎓 Análise e Desenvolvimento de Sistemas - UNIMAR.<br>
 🌐 Desenvolvedor Junior FullStack - MaisPraTI.<br>
 💻 Programador Web - SENAI.<br>
-☕ Java & Spring - DIO.<br>
+☕ Backend com Java - DIO.
+</div>
 
-## Contato
-
-#### Acesse minhas redes sociais.🫡
-
+## Contatos
 <a href="https://www.linkedin.com/in/israelsantoss/" target="_blank">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" height="50" width="50" alt="Linkedin" title="Linkedin">
 </a>
@@ -22,11 +20,12 @@
 ## ⚒️Linguagens, Frameworks e Ferramentas.⚒️
 
 <a href="https://skillicons.dev" target="_blank">
-  <img src="https://skillicons.dev/icons?i=vscode,git,figma,html,css,js,typescript,react,nodejs,lua,php,java,spring,tailwind,bootstrap,mysql" />
+  <img src="https://skillicons.dev/icons?i=vscode,git,figma,html,css,js,typescript,react,nodejs,lua,java,spring,tailwind,bootstrap,mysql" />
 </a>
 
+<br><br>
 
-<div align="center" style="align-center width:800px; margin:0 auto;">
+<div align="left" style="align-center width:800px; margin:0 auto;">
   <a href="https://github.com/anuraghazra/github-readme-stats" target="_blank">
       <img height=200 align="center" src="https://github-readme-stats.vercel.app/api?username=IsraelDev560&theme=react&rank_icon=github&show_icons=true" />
   </a>

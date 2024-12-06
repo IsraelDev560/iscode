@@ -13,7 +13,7 @@ const TypingEffectText = ({ moreText }) => {
             const timeout = setTimeout(() => {
                 setDisplayedText((prev) => prev + fullText[index]);
                 setIndex((prev) => prev + 1);
-            }, 30); // Velocidade de escrita (30ms por caractere)
+            }, 30); 
             return () => clearTimeout(timeout);
         }
     }, [index, fullText]);

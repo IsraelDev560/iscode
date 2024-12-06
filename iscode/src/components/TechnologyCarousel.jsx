@@ -55,12 +55,11 @@ const TechnologyCarousel = () => {
             onMouseUp={handleTouchEnd}
             onMouseLeave={handleTouchEnd}
         >
-            {/* Contêiner dos Slides */}
             <div
                 className="flex transition-transform duration-500 ease-in-out"
 
                 style={{
-                    transform: `translateX(-${currentIndex * 100}%)`, // Move para o slide atual
+                    transform: `translateX(-${currentIndex * 100}%)`, 
                 }}
             >
                 {techs.map((item, index) => {
@@ -69,7 +68,7 @@ const TechnologyCarousel = () => {
                         <div
                             key={index}
                             className="w-full flex-shrink-0 flex flex-col items-center justify-center text-center text-[#AE27F9]"
-                            style={{ width: "100%" }} // Cada slide ocupa 100% da área visível
+                            style={{ width: "100%" }} 
                         >
                             <IconComponent className="text-6xl mb-4" />
                             <p className="text-xl font-bold">{item.name}</p>
@@ -78,7 +77,6 @@ const TechnologyCarousel = () => {
                 })}
             </div>
 
-            {/* Indicadores de Navegação */}
             <div className="absolute bottom-4 flex space-x-2 justify-center w-full">
                 {techs.map((_, index) => (
                     <button

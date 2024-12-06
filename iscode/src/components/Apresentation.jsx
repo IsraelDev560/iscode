@@ -42,7 +42,7 @@ export const Apresentation = () => {
             <div className="text-center items-center justify-center mx-auto mt-10 space-y-2">
                 <h2 className="text-2xl font-semibold text-white">Desenvolvedor <span className="text-[#AE27F9]">Full Stack</span></h2>
                 <div className='w-full items-center mx-auto max-w-[65vw] max-h-[100vh]'>
-                    <img className='w-full h-full' src={foto} alt="" />
+                    <img className='w-full h-full my-4 ' src={foto} alt="" />
                 </div>
 
                 <h2 id='sobre' className='text-2xl font-semibold text-white'>
