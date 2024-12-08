@@ -4,8 +4,42 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export const Navbar = () => {
     const [isMobile, seIsMobile] = useState(window.innerWidth <= 768);
-    const [menu, setMenu] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const [scrollProgress, setScrollProgress] = useState(0);
 
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const scrollY = window.scrollY;
+    //         const documentHeight =
+    //         document.documentElement.scrollHeight -
+    //         document.documentElement.clientHeight;
+    //         const progress = (scrollY / documentHeight) * 100;
+    //         setScrollProgress(progress);
+    //     };
+
+    //     window.addEventListener('scroll', handleScroll);
+
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
+
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            if(scrollTop > 0){
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+    
+    const [menu, setMenu] = useState(false);
     const toggleMenu = () => {
         setMenu(!menu);
     }
@@ -26,7 +60,7 @@ export const Navbar = () => {
     ]
 
     return (
-        <nav className="flex fixed p-5 top-0 left-0 right-0 shadow-md"
+        <nav className={`flex z-50 fixed p-5 top-0 left-0 right-0 shadow-md ${scrolled ? "bg-[#0A0A0A]" : 'bg-transparent'}`}
         >
             <div className="flex w-full">
                 {isMobile ? (

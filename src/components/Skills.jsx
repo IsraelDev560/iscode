@@ -1,27 +1,33 @@
 import { FaReact, FaJava } from "react-icons/fa";
 import { BiLogoSpringBoot } from "react-icons/bi";
 import { IoLogoJavascript } from "react-icons/io5";
-import { FaHtml5, FaCss3 } from "react-icons/fa";
+import { FaHtml5, FaCss3, FaBootstrap } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { FaGitAlt, FaFigma } from "react-icons/fa6";
 
 export const Skills = () => {
 
     const skills = [
         { name: "Javascript", icon: IoLogoJavascript },
         { name: 'Java', icon: FaJava },
+        { name: "Typescript", icon: SiTypescript  },
         { name: 'HTML5', icon: FaHtml5 },
         { name: 'CSS3', icon: FaCss3 },
         { name: "React", icon: FaReact },
         { name: "SpringBoot", icon: BiLogoSpringBoot },
+        { name: "Git", icon: FaGitAlt },
+        { name: "Figma", icon: FaFigma },
         { name: "Tailwind", icon: RiTailwindCssFill },
+        { name: "Bootstrap", icon: FaBootstrap },
         { name: 'MySQL', icon: GrMysql },
     ]
 
     return (
         <div id="skills" className="mt-6">
             <h2 className="text-white text-4xl font-bold text-center">Skills</h2>
-            <div className="w-full max-w-2xl my-8 mx-auto gap-2 lg:grid-cols-4 grid grid-cols-2">
+            <div className="w-full max-w-2xl my-8 mx-auto gap-5 lg:grid-cols-4 grid grid-cols-2">
                 {skills.map((item, index) => {
                     const IconComponent = item.icon;
                     return (
