@@ -19,14 +19,14 @@ export const Skills = () => {
     ]
 
     return (
-        <div className="mt-6">
+        <div id="skills" className="mt-6">
             <h2 className="text-white text-4xl font-bold text-center">Skills</h2>
-            <div className="w-full mt-8 mx-auto gap-3  grid grid-cols-2">
+            <div className="w-full max-w-2xl my-8 mx-auto gap-2 lg:grid-cols-4 grid grid-cols-2">
                 {skills.map((item, index) => {
                     const IconComponent = item.icon;
                     return (
                         <div
-                            className="w-full flex flex-col justify-center space-y-2 mx-auto items-center text-[#AE27F9]"
+                            className="w-full flex flex-col justify-center space-y-2 mx-auto items-center text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#AE27F9]"
                             key={index}
                         >
                             <IconComponent className="text-7xl" />

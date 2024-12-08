@@ -68,10 +68,9 @@ const TechnologyCarousel = () => {
                         <div
                             key={index}
                             className="w-full flex-shrink-0 flex flex-col items-center justify-center text-center text-[#AE27F9]"
-                            style={{ width: "100%" }} 
                         >
-                            <IconComponent className="text-6xl mb-4" />
-                            <p className="text-xl font-bold">{item.name}</p>
+                            <IconComponent className="text-7xl mb-4" />
+                            <p className="text-2xl font-bold">{item.name}</p>
                         </div>
                     );
                 })}
