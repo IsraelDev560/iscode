@@ -25,7 +25,7 @@ export const Skills = () => {
     ]
 
     return (
-        <div id="skills" className="mt-6">
+        <div className="mt-6">
             <h2 className="text-black dark:text-white text-4xl font-bold text-center">Skills</h2>
             <div className="w-full max-w-2xl my-8 mx-auto gap-5 lg:grid-cols-4 grid grid-cols-2">
                 {skills.map((item, index) => {

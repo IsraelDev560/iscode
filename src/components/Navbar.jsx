@@ -2,6 +2,7 @@ import React, { useState, useEffect, useReducer } from "react"
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import { SwitchDefault } from "./utils/Switch";
+import isCodeSvg from '../assets/img/iscode-no-name.svg';
 
 export const Navbar = () => {
     const [isMobile, seIsMobile] = useState(window.innerWidth <= 768);
@@ -41,9 +42,9 @@ export const Navbar = () => {
 
     const infos = [
         { name: "Sobre", link: "#sobre", action: "" },
-        { name: "Contato", link: "#contato", action: "" },
         { name: "Skills", link: "#skills", action: "" },
         { name: "Projetos", link: "#projetos", action: "" },
+        { name: "Contato", link: "#contato", action: "" },
     ]
 
     return (
@@ -52,9 +53,12 @@ export const Navbar = () => {
             <div className="flex w-full">
                 {isMobile ? (
                     <div className="flex justify-between w-full">
-                        <h2 className="text-xl font-bold text-black dark:text-white z-10">
-                            iS<span className="text-[#AE27F9]">Code</span>
-                        </h2>
+                         <div className="flex space-x-4 items-center">
+                            <img onClick={scrollTop} className="w-8 cursor-pointer" src={isCodeSvg} alt={"SVG ISCODE"} />
+                            <h2 onClick={scrollTop} className="text-xl cursor-pointer font-bold text-black dark:text-white">
+                                iS<span className="text-[#AE27F9]">Code</span>
+                            </h2>
+                        </div>
                         <div className="text-left space-x-4 items-center w-full justify-end flex">
                             <SwitchDefault />
                             {menu ? (<IoMdClose onClick={toggleMenu} className="justify-end text-black dark:text-white text-2xl cursor-pointer transition" />) : (<IoMdMenu onClick={toggleMenu} className="justify-end text-black dark:text-white text-2xl cursor-pointer transition" />)}
@@ -85,9 +89,12 @@ export const Navbar = () => {
                     </div>
                 ) : (
                     <div className="flex justify-between w-full">
-                        <h2 className="text-xl font-bold text-black dark:text-white">
-                            iS<span className="text-[#AE27F9]">Code</span>
-                        </h2>
+                        <div className="w-xs flex space-x-4 items-center">
+                            <img onClick={scrollTop} className="w-10 cursor-pointer" src={isCodeSvg} alt={"SVG ISCODE"} />
+                            <h2 onClick={scrollTop} className="text-xl cursor-pointer font-bold text-black dark:text-white">
+                                iS<span className="text-[#AE27F9]">Code</span>
+                            </h2>
+                        </div>
                         <ul className="flex space-x-4 text-black dark:text-white text-xl justify-between">
                             <span onClick={scrollTop} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">Home</span>
                             {infos.map((item, index) => (

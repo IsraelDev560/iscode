@@ -1,6 +1,6 @@
 import netflixImage from '../img/projects/netflixImage.png'
 import tecStore from '../img/projects/tecstoreImage.png'
-import calculator from '../img/projects/calculator.png'
+import calculator from '../img/projects/calculator-2.png'
 
 import { FaReact, FaJava } from "react-icons/fa";
 import { BiLogoSpringBoot } from "react-icons/bi";
@@ -57,7 +57,7 @@ export const projects = [
         image: calculator,
         link: "https://github.com/IsraelDev560/calculadora?tab=readme-ov-file",
         title: "Calculadora",
-        desc: "Este projeto consiste em uma Calculadora simples e funcional com 4 operações matemáticas.",
+        desc: "Este projeto consiste em uma calculadora simples e funcional com 4 operações matemáticas.",
         icons: [
             {
                 title: 'JavaScrpipt',

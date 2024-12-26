@@ -48,7 +48,7 @@ export const About = () => {
                     </AnimatePresence>
                 </span>
 
-                <button onClick={toggleMoreText} className='p-3 text-white border border-[#AE27F9] hover:text-[#AE27F9] hover:bg-transparent bg-[#AE27F9] rounded-md transition'>
+                <button id="skills" onClick={toggleMoreText} className='p-3 text-white border border-[#AE27F9] hover:text-[#AE27F9] hover:bg-transparent bg-[#AE27F9] rounded-md transition'>
                     {moreText ? "Leia Menos" : "Leia Mais"}
                 </button>
                 {/* <h2 className='text-xl text-black dark:text-white text-center'>Minhas redes Sociais</h2> */}
