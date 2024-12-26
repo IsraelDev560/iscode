@@ -9,18 +9,20 @@ import {
     IconButton,
 } from "@material-tailwind/react";
 import { projects } from "../assets/mocks/projects";
+import { ReadMore } from "./utils/Readmore";
 
 
 export const Projects = () => {
     return (
         <div className="w-full flex flex-col p-4">
             <h2 className="text-black mx-auto mb-8 dark:text-white text-4xl font-bold text-center">Projetos</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 place-items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-3 max-w-[75vw] mx-auto gap-2 place-items-center">
                 {projects.map((item, index) => (
-                    <Card key={index} className="w-full bg-gray-50 dark:bg-[#1D1C1CFF] max-w-[26rem] shadow-lg">
+                    <Card key={index} className="w-full bg-gray-50 dark:bg-[#1D1C1CFF] max-w-5xl shadow-lg">
                         <CardHeader floated={false} color="blue-gray">
                             <img
                                 src={item.image}
+                                className="object-contain w-full h-auto"
                                 alt="ui/ux review check"
                             />
                             <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
@@ -45,7 +47,7 @@ export const Projects = () => {
                                 <Typography variant="h5" className="text-gray-800 dark:text-white font-medium">
                                     {item.title}
                                 </Typography>
-                                <Typography
+                                {/* <Typography
                                     className="flex items-center text-gray-800 dark:text-white gap-1.5 font-normal"
                                 >
                                     <svg
@@ -61,10 +63,14 @@ export const Projects = () => {
                                         />
                                     </svg>
                                     5.0
-                                </Typography>
+                                </Typography> */}
                             </div>
-                            <Typography className="text-gray-800 dark:text-gray-400">
-                                {item.desc}
+                            <Typography className="text-gray-800 overflow-y-auto max-h-[28vh] scrollbar-hide dark:text-gray-400">
+                                {item.desc.length > 100 ? (
+                                    <ReadMore text={item.desc} maxLength={100}/>
+                                ) : (
+                                    item.desc
+                                )}
                             </Typography>
                             <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                                 {item.icons.map((prop, index) => {

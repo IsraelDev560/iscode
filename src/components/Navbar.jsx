@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useReducer } from "react"
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
-import { SwitchDefault } from "./Switch";
+import { SwitchDefault } from "./utils/Switch";
 
 export const Navbar = () => {
     const [isMobile, seIsMobile] = useState(window.innerWidth <= 768);

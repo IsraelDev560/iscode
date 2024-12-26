@@ -1,5 +1,7 @@
 import netflixImage from '../img/projects/netflixImage.png'
 import tecStore from '../img/projects/tecstoreImage.png'
+import calculator from '../img/projects/calculator.png'
+
 import { FaReact, FaJava } from "react-icons/fa";
 import { BiLogoSpringBoot } from "react-icons/bi";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -36,6 +38,26 @@ export const projects = [
         link: "https://github.com/IsraelDev560/landind-page-maisprati",
         title: "Tec Store",
         desc: "Este projeto consiste em uma Landing Page simples e funcional, desenvolvida como parte dos exercícios do curso Desenvolvedor Júnior Full-Stack +praTI. A página foi construída utilizando HTML, CSS e JavaScript, com foco em boas práticas de design responsivo e organização de código.",
+        icons: [
+            {
+                title: 'JavaScrpipt',
+                icon: IoLogoJavascript
+            },
+            {
+                title: "HTML",
+                icon: FaHtml5
+            },
+            {
+                title: "CSS",
+                icon: FaCss3
+            }
+        ]
+    },
+    {
+        image: calculator,
+        link: "https://github.com/IsraelDev560/calculadora?tab=readme-ov-file",
+        title: "Calculadora",
+        desc: "Este projeto consiste em uma Calculadora simples e funcional com 4 operações matemáticas.",
         icons: [
             {
                 title: 'JavaScrpipt',
