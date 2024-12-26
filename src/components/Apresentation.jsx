@@ -24,10 +24,10 @@ export const Apresentation = () => {
     ]
 
     return (
-        <div id='home' className="flex flex-col mt-32 items-center mx-auto">
-            <div className="text-center text-white space-y-2">
+        <div className="flex flex-col mt-32 items-center mx-auto">
+            <div className="text-center text-black dark:text-white space-y-2">
                 <p className="text-2xl">Bem-vindo(a) ao</p>
-                <h2 className="text-4xl font-bold text-white z-10">
+                <h2 className="text-4xl font-bold text-black dark:text-white z-10">
                     iS<span className="text-[#AE27F9]">Code</span>
                 </h2>
                 <p className="text-lg max-w-xs">
@@ -43,7 +43,7 @@ export const Apresentation = () => {
                             href={item.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-white my-5 text-4xl hover:text-[#AE27F9] transition"
+                            className="text-black dark:text-white my-5 text-4xl hover:text-[#AE27F9] transition"
                         >
                             <IconComponent />
                         </a>

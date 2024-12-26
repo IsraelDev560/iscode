@@ -76,7 +76,7 @@ const TechnologyCarousel = () => {
                 })}
             </div>
 
-            <div className="absolute bottom-4 flex space-x-2 justify-center w-full">
+            <div id='sobre' className="absolute bottom-4 flex space-x-2 justify-center w-full">
                 {techs.map((_, index) => (
                     <button
                         key={index}
