@@ -3,11 +3,13 @@ import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import { SwitchDefault } from "./utils/Switch";
 import isCodeSvg from '../assets/img/iscode-no-name.svg';
+import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
     const [isMobile, seIsMobile] = useState(window.innerWidth <= 768);
     const [scrolled, setScrolled] = useState(false);
     const [menu, setMenu] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -34,6 +36,7 @@ export const Navbar = () => {
     }, []);
 
     const scrollTop = () => {
+        navigate("/")
         window.scrollTo({
             top: 0,
             behavior: 'smooth'

@@ -10,9 +10,11 @@ import {
 } from "@material-tailwind/react";
 import { projects } from "../assets/mocks/projects";
 import { ReadMore } from "./utils/Readmore";
+import { useNavigate } from "react-router-dom";
 
 
 export const Projects = () => {
+    const navigate = useNavigate();
     return (
         <div id="projetos" className="w-full flex flex-col p-4">
             <h2 className="text-black mx-auto mb-8 dark:text-white text-4xl font-bold text-center">Projetos</h2>
@@ -90,6 +92,13 @@ export const Projects = () => {
                                 <a href={item.link} rel="noreferrer" target="__blank">
                                     Repositorio
                                 </a>
+                            </Button>
+                        </CardFooter>
+                        <CardFooter className="pt-1">
+                            <Button size="lg" className="text-black bg-gray-400 dark:bg-[#141414FF] dark:text-white" fullWidth={true}>
+                                <p onClick={() => navigate(`/content/${item.showMore}`)}>
+                                    Ver mais
+                                </p>
                             </Button>
                         </CardFooter>
                     </Card>

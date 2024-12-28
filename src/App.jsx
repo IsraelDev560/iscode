@@ -1,21 +1,21 @@
-import { useCallback, useRef, useState } from 'react'
-import { Navbar } from './components/Navbar'
-import { Apresentation } from './components/Apresentation'
-import { Skills } from './components/Skills'
-import { About } from './components/About'
-import { Projects } from './components/Projects'
-import { FooterWithLogo } from './components/FooterWithLogo'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import { Content } from './pages/Content'
+import { Home } from './pages/Home'
+
+function AppContent() {
+  return (
+    <Routes>
+      <Route index element={<Home />} />
+      <Route path="/content/:pageId" element={<Content />} />
+    </Routes>
+  )
+}
 
 function App() {
   return (
-    <div className="flex flex-col justify-between font-sans bg-gray-50 dark:bg-[#0A0A0A] w-full min-h-screen transition">
-      <Navbar />
-      <Apresentation />
-      <About />
-      <Skills />
-      <Projects/>
-      <FooterWithLogo/>
-    </div>
+    <Router>
+      <AppContent />
+    </Router>
   )
 }
 
