@@ -17,12 +17,11 @@ import { CarouselDefault } from "../components/utils/CarouselDefault";
 
 export const Content = () => {
     const navigate = useNavigate();
-    const { pageId } = useParams(); // Obtém o ID da página da URL
+    const { pageId } = useParams();
     const page = projects.find(project => project.showMore === pageId);
 
     if (!page) {
         console.error("Page not found");
-        // Você pode redirecionar ou renderizar algo como uma página de erro aqui
     }
 
     return (

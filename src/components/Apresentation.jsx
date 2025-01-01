@@ -1,21 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-// import { AnimatePresence, motion } from "framer-motion";
-// import TypingEffectText from './TypingEffectText';
 import TechnologyCarousel from './TechnologyCarousel';
 
 export const Apresentation = () => {
-    // const [scrollY, setOnScroll] = useState(0);
     const [moreText, setMoreText] = useState(false);
-
-    const toggleMoreText = () => setMoreText(!moreText);
-
-    // useEffect(() => {
-    //     const toggleSection = () => setOnScroll(window.scrollY);
-    //     window.addEventListener('scroll', toggleSection);
-    //     return () => window.removeEventListener('scroll', toggleSection)
-    // }, [])
 
     const links = [
         { icon: FaLinkedin, link: "https://www.linkedin.com/in/israelsantoss/" },
