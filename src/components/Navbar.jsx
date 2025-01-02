@@ -51,7 +51,7 @@ export const Navbar = () => {
     ]
 
     return (
-        <nav className={`flex z-50 fixed p-5 top-0 left-0 right-0 shadow-md ${scrolled ? "bg-gray-50 dark:bg-[#0A0A0A]" : 'bg-transparent'}`}
+        <nav className={`flex z-50 fixed p-5 top-0 left-0 right-0 shadow-md ${scrolled ? "bg-gray-200 dark:bg-[#0A0A0A]" : 'bg-transparent'}`}
         >
             <div className="flex w-full">
                 {isMobile ? (

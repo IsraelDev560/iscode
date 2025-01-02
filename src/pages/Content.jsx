@@ -25,20 +25,23 @@ export const Content = () => {
     }
 
     return (
-        <div className="flex flex-col justify-between font-sans bg-gray-50 dark:bg-[#0A0A0A] w-full min-h-screen transition">
+        <div className="flex flex-col justify-between font-sans bg-gray-200 dark:bg-[#0A0A0A] w-full min-h-screen h-full transition">
             <Navbar />
             <div className="flex flex-col p-2 mt-20 items-center mx-auto">
-                <Card className="w-full bg-gray-200 dark:bg-[#1D1C1CFF] max-w-6xl shadow-lg">
+                <Card className="w-full bg-transparent max-w-6xl shadow-lg">
                     <div className="mb-3 text-left mt-2 ml-2 flex items-center justify-bewteen space-x-4">
-                        <IoMdArrowRoundBack onClick={() => navigate(-1)} className="text-white ml-1 text-xl cursor-pointer" />
-                        <Typography variant="h4" className="text-gray-800 dark:text-white font-semibold">
-                            {page.title}
+                        <IoMdArrowRoundBack onClick={() => navigate(-1)} className="text-black dark:text-white ml-1 text-xl cursor-pointer" />
+                        <Typography variant="h4" className="text-black dark:text-white font-semibold">
+                            Voltar
                         </Typography>
                     </div>
                     <div className="p-2">
                         <CarouselDefault media={page.moreMedia} />
                     </div>
                     <CardBody>
+                        <Typography variant="h4" className="text-gray-800 mb-2 dark:text-white font-semibold">
+                            {page.title}
+                        </Typography>
                         <Typography className="text-gray-800 lg:max-h-[13vh] overflow-y-auto scrollbar-hide dark:text-gray-400">
                             {page.desc}
                         </Typography>

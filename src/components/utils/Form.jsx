@@ -8,11 +8,11 @@ import {
 
 export function Form({ actionForm, state, handleChange, feedback }) {
     return (
-        <Card color="transparent" shadow={false}>
-            <Typography variant="h4" className="text-black dark:text-white">
-                Entre em contato conosco
+        <Card className="w-full flex mx-auto" color="transparent" shadow={false}>
+            <Typography variant="h4" className="mx-auto text-4xl mt-8 text-black dark:text-white">
+                Entre em <span className="text-[#AE27F9]">contato</span> conosco
             </Typography>
-            <form onSubmit={actionForm} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+            <form onSubmit={actionForm} className="mt-8 mb-2 w-full max-w-3xl mx-auto">
                 <div className="mb-1 flex flex-col gap-6">
                     <Typography variant="h6" className="text-black dark:text-white -mb-3">
                         Seu Email
@@ -24,7 +24,7 @@ export function Form({ actionForm, state, handleChange, feedback }) {
                         value={state.email}
                         placeholder="name@mail.com"
                         onChange={(e) => handleChange(e)}
-                        className=" !border-t-blue-gray-200 focus:!border-t-gray-900 text-black dark:text-white"
+                        className=" !border-t-blue-gray-400 focus:!border-t-gray-900 text-black dark:text-white"
                         labelProps={{
                             className: "before:content-none after:content-none",
                         }}

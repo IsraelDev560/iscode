@@ -19,7 +19,7 @@ const TypingEffectText = ({ moreText }) => {
     }, [index, fullText]);
 
     return (
-        <p className="text-lg leading-relaxed text-black dark:text-white mx-auto max-w-xs transition">
+        <p className="text-lg leading-relaxed text-black dark:text-white mx-auto lg:max-w-full max-w-sm transition">
             {displayedText.split(/\n/).map((line, index) => (
                 <span key={index}>
                     {line.split(" ").map((word, i) => (
