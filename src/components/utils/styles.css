@@ -50,8 +50,8 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    top: -68px;
-    right: -69px;
+    top: -65px;
+    right: -65px;
     box-shadow: 0 0 0 0 rgb(142, 84, 145);
     animation: 3s infinite linear pulse;
   }

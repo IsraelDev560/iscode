@@ -24,7 +24,7 @@ export const About = () => {
                         Sobre<span className="text-[#AE27F9]"> mim </span>
                     </h2>
 
-                    <span className='text-lg leading-relaxed text-black dark:text-white'>
+                    <span className='text-lg leading-relaxed'>
                         <TypingEffectText moreText={true} />
                         <AnimatePresence>
                             {moreText && (
@@ -33,7 +33,7 @@ export const About = () => {
                                     animate={{ y: 0, opacity: 1 }}
                                     exit={{ y: 200, opacity: 0 }}
                                     transition={{ type: "spring", stiffness: 100, damping: 15 }}
-                                    className="w-full relative z-0 text-black dark:text-white lg:max-w-full "
+                                    className="w-full relative z-0 text-black dark:text-gray-300 lg:max-w-full "
                                 >
 
                                     <p>
