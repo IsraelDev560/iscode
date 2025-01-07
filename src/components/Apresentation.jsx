@@ -39,7 +39,7 @@ export const Apresentation = () => {
                     })}
                 </div>
             </div>
-            <div className='relative w-full max-w-xs lg:top-14 my-8 lg:right-24 flex h-[20vw] justify-center z-10'>
+            <div id='sobre' className='relative w-full max-w-xs lg:top-14 my-8 lg:right-24 flex h-[20vw] justify-center z-10'>
                 <Atom />
                 {/* <img className='w-full h-auto max-w-xs' src={image} alt="" /> */}
             </div>

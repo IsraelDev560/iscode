@@ -44,10 +44,10 @@ export const Navbar = () => {
     }
 
     const infos = [
-        { name: "Sobre", link: "#sobre", action: "" },
-        { name: "Skills", link: "#skills", action: "" },
-        { name: "Projetos", link: "#projetos", action: "" },
-        { name: "Contato", link: "#contato", action: "" },
+        { name: "Sobre", link: "#sobre",  },
+        { name: "Skills", link: "#skills",  },
+        { name: "Projetos", link: "#projetos",  },
+        { name: "Contato", link: "#contato",  },
     ]
 
     return (
@@ -80,7 +80,7 @@ export const Navbar = () => {
                                         <span onClick={scrollTop} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">Home</span>
                                         {infos.map((item, index) => (
                                             <li key={index}>
-                                                <a onClick={item.action} href={item.link} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">
+                                                <a href={item.link} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">
                                                     {item.name}
                                                 </a>
                                             </li>

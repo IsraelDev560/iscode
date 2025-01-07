@@ -42,7 +42,10 @@ export const Content = () => {
                         <Typography variant="h4" className="text-gray-800 mb-2 dark:text-white font-semibold">
                             {page.title}
                         </Typography>
-                        <Typography className="text-gray-800 lg:max-h-[13vh] overflow-y-auto scrollbar-hide dark:text-gray-400">
+                        <Typography variant="h6" className="text-gray-400 mb-2 font-semibold">
+                            Status: {page.conclued ? <span className="text-green-600">Concluido.</span> : <span className="text-red-500">Em Desenvolvimento</span>}
+                        </Typography>
+                        <Typography className="text-gray-800 overflow-y-auto scrollbar-hide dark:text-gray-400">
                             {page.desc}
                         </Typography>
                         <div className="group mt-5 inline-flex flex-wrap items-center gap-3">
@@ -58,12 +61,33 @@ export const Content = () => {
                             })}
                         </div>
                     </CardBody >
-                    <CardFooter className="pt-1">
-                        <Button size="lg" className="text-black bg-gray-400 dark:bg-[#141414FF] dark:text-white" fullWidth={true}>
-                            <a href={page.link} rel="noreferrer" target="__blank">
-                                Repositorio
-                            </a>
-                        </Button>
+                    <CardFooter className="pt-1 space-y-2">
+                        {page.link ? (
+                            <Button size="lg" className="text-black bg-gray-400 dark:bg-[#141414FF] dark:text-white" fullWidth={true}>
+                                <a href={page.link} rel="noreferrer" target="__blank">
+                                    Repositório
+                                </a>
+                            </Button>
+                        ) : (
+                            <Button size="lg" className={`text-black bg-red-400 dark:text-white`} disabled fullWidth={true}>
+                                <p>
+                                    Repositório indisponível
+                                </p>
+                            </Button>
+                        )}
+                        {page.deploy ? (
+                            <Button size="lg" className={`text-black bg-gray-400 dark:bg-[#141414FF] dark:text-white`} fullWidth={true}>
+                                <a href={page.deploy} rel="noreferrer" target="__blank">
+                                    Deploy
+                                </a>
+                            </Button>
+                        ) : (
+                            <Button size="lg" className={`text-black bg-red-400 dark:text-white`} disabled fullWidth={true}>
+                                <p>
+                                    Deploy indisponível
+                                </p>
+                            </Button>
+                        )}
                     </CardFooter>
                 </Card>
             </div>
