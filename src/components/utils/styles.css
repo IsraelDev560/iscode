@@ -1,0 +1,82 @@
+.react {
+    position: absolute;
+    width: 50px;
+    height: 125px;
+    border: 5px solid #AE27F9;
+    border-radius: 50%;
+    background: transparent;
+    transform: rotate(90deg);
+    animation: 8s infinite linear spin;
+  }
+  
+  .react::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 125px;
+    border: 5px solid #AE27F9;
+    border-radius: 50%;
+    background: transparent;
+    transform: rotate(60deg);
+    top: -5px;
+    right: -5px;
+  }
+  .react::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 125px;
+    border: 5px solid #AE27F9;
+    border-radius: 50%;
+    background: transparent;
+    transform: rotate(120deg);
+    top: -5px;
+    right: -5px;
+  }
+  .dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 51px;
+    border-radius: 50%;
+    background: linear-gradient(#C923AE, #6B25B4);
+  }
+  
+  .dot::before {
+    content: '';
+    position: absolute;
+    background: transparent;
+    border: 3px solid #a97abc;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    top: -65px;
+    right: -65px;
+    box-shadow: 0 0 0 0 rgb(142, 84, 145);
+    animation: 3s infinite linear pulse;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(241, 14, 226, 0.4);
+    }
+    30% {
+      box-shadow: 0 0 0 25px rgba(97, 218, 251, 0);
+    }
+    70% {
+      box-shadow: 0 0 0 0 rgba(97, 218, 251, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(97, 218, 251, 0);
+    }
+  }
+  
