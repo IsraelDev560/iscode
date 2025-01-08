@@ -9,7 +9,7 @@ export const Apresentation = () => {
     const links = [
         { icon: FaLinkedin, link: "https://www.linkedin.com/in/israelsantoss/" },
         { icon: FaGithub, link: "https://github.com/IsraelDev560" },
-        { icon: SiGmail, link: "https://mailto:devisrael560@gmail.com" },
+        { icon: SiGmail, link: "mailto:devisrael560@gmail.com?subject=[CONTATO VIA LINK]" },
     ]
 
     return (

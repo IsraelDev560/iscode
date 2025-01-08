@@ -10,7 +10,7 @@ export const Contact = () => {
     const links = [
         { icon: FaLinkedin, link: "https://www.linkedin.com/in/israelsantoss/" },
         { icon: FaGithub, link: "https://github.com/IsraelDev560" },
-        { icon: SiGmail, link: "https://mailto:devisrael560@gmail.com" },
+        { icon: SiGmail, link: "mailto:devisrael560@gmail.com?subject=[CONTATO VIA LINK]" },
         { icon: FaInstagram, link: 'https://www.instagram.com/is.codess/' },
         { icon: FaThreads, link: "https://www.threads.net/@is.codess" }
     ]
