@@ -18,7 +18,7 @@ export const Projects = () => {
     return (
         <div id="projetos" className="w-full flex flex-col">
             <h2 className="text-black items-left lg:mx-auto flex px-6 my-8 dark:text-white text-4xl font-bold text-center">Projetos</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto gap-2 place-items-center lg:max-w-[60%]">
+            <div className="grid grid-cols-1 xl:grid-cols-2 mx-auto gap-2 place-items-center lg:max-w-[60vw]">
                 {projects.map((item, index) => (
                     <Card key={index} className="w-full lg:h-[65vh] bg-transparent max-w-5xl shadow-lg">
                         <CardBody>

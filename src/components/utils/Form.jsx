@@ -14,6 +14,21 @@ export function Form({ actionForm, state, handleChange, feedback }) {
             </Typography>
             <form onSubmit={actionForm} className="mt-8 mb-2 w-full max-w-3xl mx-auto">
                 <div className="mb-1 flex flex-col gap-6">
+                <Typography variant="h6" className="text-black dark:text-white -mb-3">
+                        Seu Nome
+                    </Typography>
+                    <Input
+                        size="lg"
+                        name="name"
+                        type="name"
+                        value={state.name}
+                        placeholder="ex: Paulo Santos"
+                        onChange={(e) => handleChange(e)}
+                        className=" !border-t-blue-gray-400 focus:!border-t-gray-900 text-black dark:text-white"
+                        labelProps={{
+                            className: "before:content-none after:content-none",
+                        }}
+                    />
                     <Typography variant="h6" className="text-black dark:text-white -mb-3">
                         Seu Email
                     </Typography>

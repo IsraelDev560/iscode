@@ -1,6 +1,7 @@
 import { useState, useReducer } from 'react';
-
+import emailjs from '@emailjs/browser';
 const initialState = {
+    name: "",
     email: "",
     subject: "",
     message: "",
@@ -52,17 +53,21 @@ export const useForm = () => {
     };
 
     const validate = (state, dispatch) => {
+        if (!state.name) {
+            errorsMessages.name = "Você deve inserir um nome para prosseguir.";
+            setFeedback('');
+        }
         if (!state.email) {
             errorsMessages.email = "Você deve inserir um email para prosseguir.";
-            setFeedback('')
+            setFeedback('');
         }
         if (!state.subject) {
             errorsMessages.subject = "Insira um assunto para prosseguir.";
-            setFeedback('')
+            setFeedback('');
         }
         if (!state.message) {
             errorsMessages.message = "Insira uma mensagem para prosseguir";
-            setFeedback('')
+            setFeedback('');
         }
 
         Object.entries(errorsMessages).forEach(([field, m]) => {
@@ -78,7 +83,23 @@ export const useForm = () => {
         if (Object.keys(errorsValidation).length > 0) {
             return;
         }
-        setFeedback('Sucesso, email enviado!')
+
+        const templateParams = {
+            from_subject: state.subject,
+            from_name: state.name,
+            message: state.message,
+            email: state.email,
+        }
+
+        emailjs.send(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_EMAIL_TEMPLATE_KEY, templateParams, import.meta.env.VITE_PUBLIC_KEY)
+            .then((response) => {
+                setFeedback('Sucesso, email enviado!');
+                console.log(response.status);
+                console.log(response.text);
+                dispatch({type: 'handleInput', field: e.target.value, payload: '' })
+            }, (err) => {
+                console.log(err);
+            })
     }
     return {
         handleChange,
