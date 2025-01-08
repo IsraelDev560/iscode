@@ -30,7 +30,7 @@ export function Form({ actionForm, state, handleChange, feedback }) {
                             className: "before:content-none after:content-none",
                         }}
                     />
-                    {state.errors.name && <p className="text-red-500">{state.errors.email}</p>}
+                    {state.errors.name && <p className="text-red-500">{state.errors.name}</p>}
                     <Typography variant="h6" className="text-black dark:text-white -mb-3">
                         Seu Email
                     </Typography>
