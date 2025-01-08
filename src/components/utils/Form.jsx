@@ -1,7 +1,7 @@
 import {
     Card,
     Input,
-    Checkbox,
+    Textarea,
     Button,
     Typography,
 } from "@material-tailwind/react";
@@ -21,6 +21,7 @@ export function Form({ actionForm, state, handleChange, feedback }) {
                         size="lg"
                         name="name"
                         type="name"
+                        maxLength={100}
                         value={state.name}
                         placeholder="ex: Paulo Santos"
                         onChange={(e) => handleChange(e)}
@@ -35,6 +36,7 @@ export function Form({ actionForm, state, handleChange, feedback }) {
                     <Input
                         size="lg"
                         name="email"
+                        maxLength={50}
                         type="email"
                         value={state.email}
                         placeholder="name@mail.com"
@@ -52,6 +54,7 @@ export function Form({ actionForm, state, handleChange, feedback }) {
                         size="lg"
                         name="subject"
                         type="text"
+                        maxLength={35}
                         value={state.subject}
                         placeholder="ex: PROPOSTA"
                         onChange={(e) => handleChange(e)}
@@ -64,10 +67,11 @@ export function Form({ actionForm, state, handleChange, feedback }) {
                     <Typography variant="h6" className="text-black dark:text-white -mb-3">
                         Mensagem
                     </Typography>
-                    <Input
-                        type="text"
+                    <Textarea
+                        type="textarea"
                         size="lg"
                         name="message"
+                        maxLength={560}
                         value={state.message}
                         placeholder="Olá iSCode eu gostaria..."
                         onChange={(e) => handleChange(e)}
