@@ -96,7 +96,10 @@ export const useForm = () => {
                 setFeedback('Sucesso, email enviado!');
                 console.log(response.status);
                 console.log(response.text);
-                dispatch({type: 'handleInput', field: e.target.value, payload: '' })
+                dispatch({type: 'handleInput', field: 'name', payload: '' })
+                dispatch({type: 'handleInput', field: 'subject', payload: '' })
+                dispatch({type: 'handleInput', field: 'email', payload: '' })
+                dispatch({type: 'handleInput', field: 'message', payload: '' })
             }, (err) => {
                 console.log(err);
             })
