@@ -7,6 +7,7 @@ const initialState = {
     message: "",
     sucess: "",
     errors: {
+        name: "",
         email: "",
         subject: "",
         message: ""
