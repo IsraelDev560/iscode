@@ -35,6 +35,7 @@ const reducer = (state, action) => {
 }
 export const useForm = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
+    const [loading, setLoading] = useState(false);
     const errorsMessages = {};
     const [feedback, setFeedback] = useState('');
     const handleChange = (e) => {
@@ -78,35 +79,39 @@ export const useForm = () => {
         return errorsMessages;
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const errorsValidation = validate(state, dispatch);
         if (Object.keys(errorsValidation).length > 0) {
             return;
         }
-
+        
         const templateParams = {
             from_subject: state.subject,
             from_name: state.name,
             message: state.message,
             email: state.email,
         }
-
-        emailjs.send(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_EMAIL_TEMPLATE_KEY, templateParams, import.meta.env.VITE_PUBLIC_KEY)
-            .then((response) => {
+        try {
+            setLoading(true)
+            const response = await emailjs.send(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_EMAIL_TEMPLATE_KEY, templateParams, import.meta.env.VITE_PUBLIC_KEY)
+            console.log(response.status);
+            console.log(response.text);
+            setTimeout(() => {
                 setFeedback('Sucesso, email enviado!');
-                console.log(response.status);
-                console.log(response.text);
-                dispatch({type: 'handleInput', field: 'name', payload: '' })
-                dispatch({type: 'handleInput', field: 'subject', payload: '' })
-                dispatch({type: 'handleInput', field: 'email', payload: '' })
-                dispatch({type: 'handleInput', field: 'message', payload: '' })
-            }, (err) => {
-                console.log(err);
-            })
+                dispatch({ type: 'handleInput', field: 'name', payload: '' })
+                dispatch({ type: 'handleInput', field: 'subject', payload: '' })
+                dispatch({ type: 'handleInput', field: 'email', payload: '' })
+                dispatch({ type: 'handleInput', field: 'message', payload: '' })
+                setLoading(false);
+            }, 1500)
+        } catch (err) {
+            console.log(err)
+        }
     }
     return {
         handleChange,
+        loading,
         state,
         handleSubmit,
         feedback,

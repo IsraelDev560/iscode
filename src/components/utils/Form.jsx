@@ -6,7 +6,7 @@ import {
     Typography,
 } from "@material-tailwind/react";
 
-export function Form({ actionForm, state, handleChange, feedback }) {
+export function Form({ actionForm, state, handleChange, feedback, loading }) {
     return (
         <Card className="w-full flex mx-auto" color="transparent" shadow={false}>
             <Typography variant="h4" className="mx-auto text-4xl mt-8 text-black dark:text-white">
@@ -14,7 +14,7 @@ export function Form({ actionForm, state, handleChange, feedback }) {
             </Typography>
             <form onSubmit={actionForm} className="mt-8 mb-2 w-full max-w-3xl mx-auto">
                 <div className="mb-1 flex flex-col gap-6">
-                <Typography variant="h6" className="text-black dark:text-white -mb-3">
+                    <Typography variant="h6" className="text-black dark:text-white -mb-3">
                         Seu Nome
                     </Typography>
                     <Input
@@ -84,10 +84,20 @@ export function Form({ actionForm, state, handleChange, feedback }) {
                     {state.errors.message && <p className="text-red-500">{state.errors.message}</p>}
                 </div>
                 {feedback && <p className="text-green-500">{feedback}</p>}
-                <Button type="submit" className="mt-6" fullWidth>
-                    Enviar
-                </Button>
+                {loading ? (
+                    <Button className="mt-6" fullWidth>
+                        <div className="flex items-center justify-center">
+                            <div className="animate-spin rounded-full h-6 w-6 mr-2 border-t-4 border-[#AE27F9]">
+                            </div>
+                            <p className="text-[#AE27F9] text-base font-semibold">Carregando...</p>
+                        </div>
+                    </Button>
+                ) : (
+                    <Button type="submit" className="mt-6" fullWidth>
+                        Enviar
+                    </Button>
+                )}
             </form>
-        </Card>
+        </Card >
     );
 }

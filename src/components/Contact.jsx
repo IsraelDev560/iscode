@@ -15,10 +15,10 @@ export const Contact = () => {
         { icon: FaThreads, link: "https://www.threads.net/@is.codess" }
     ]
 
-    const { state, feedback, handleChange, handleSubmit } = useForm();
+    const { state, feedback, handleChange, handleSubmit, loading } = useForm();
     return (
         <div id="contato" className="flex-col w-full mx-auto items-center justify-center flex p-4">
-            <Form state={state} feedback={feedback} handleChange={handleChange} actionForm={handleSubmit} />
+            <Form state={state} feedback={feedback} loading={loading} handleChange={handleChange} actionForm={handleSubmit} />
 
             <h4 className="mt-8 mb-2 font-semibold text-3xl text-black dark:text-white">Ou pelas redes sociais</h4>
 
