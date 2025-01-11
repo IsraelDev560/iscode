@@ -164,7 +164,7 @@ export const projects = [
         title: "Spotify",
         showMore: 'spotify',
         conclued: true,
-        desc: "Este projeto é um clone visual do Spotify desenvolvido para aprimorar habilidades em HTML, CSS e JavaScript. Ele apresenta uma interface moderna e responsiva, com elementos inspirados no design original do Spotify, incluindo seções como 'Música para todos', 'O que o Spotify tem?' e 'Fácil'. As funcionalidades foram criadas com foco em design interativo e navegação fluida, proporcionando uma experiência realista de um site de música. O projeto inclui animações, responsividade e um layout visualmente atraente, perfeito para exibição em portfólios e práticas front-end.",
+        desc: "Este projeto é um clone visual do Spotify desenvolvido para aprimorar habilidades em HTML, CSS e JavaScript. Ele apresenta uma interface moderna e responsiva, com elementos inspirados no design original do Spotify, incluindo seções como 'Música para todos', 'O que o Spotify tem?' e 'Fácil'. As funcionalidades foram criadas com foco em design interativo e navegação fluida, proporcionando uma experiência realista de um site de música. O projeto inclui animações, responsividade e um layout visualmente atraente.",
         icons: [
             {
                 title: 'JavaScrpipt',
