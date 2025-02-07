@@ -50,6 +50,7 @@ export const Projects = () => {
                         <CardHeader floated={false} color="blue-gray">
                             <img
                                 src={item.image}
+                                loading="lazy"
                                 className="object-contain w-full h-auto"
                                 alt="ui/ux review check"
                             />
