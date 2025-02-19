@@ -51,7 +51,7 @@ export function FooterWithLogo() {
       </div>
       <hr className="my-8 border border-gray-300 dark:border-[#242629]" />
       <Typography className="text-center text-black dark:text-white font-semibold">
-        &copy; 2024 iS<span className="text-[#AE27F9]">Code</span>
+        &copy; 2025 iS<span className="text-[#AE27F9]">Code</span>
       </Typography>
     </footer>
   );
