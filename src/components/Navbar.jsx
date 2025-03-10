@@ -80,7 +80,7 @@ export const Navbar = () => {
                                         <span onClick={scrollTop} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">Home</span>
                                         {infos.map((item, index) => (
                                             <li key={index}>
-                                                <a href={item.link} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">
+                                                <a onClick={scrollTop} href={item.link} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">
                                                     {item.name}
                                                 </a>
                                             </li>
@@ -102,7 +102,7 @@ export const Navbar = () => {
                             <span onClick={scrollTop} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">Home</span>
                             {infos.map((item, index) => (
                                 <li key={index}>
-                                    <a onClick={item.action} href={item.link} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">
+                                    <a onClick={scrollTop} href={item.link} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">
                                         {item.name}
                                     </a>
                                 </li>
