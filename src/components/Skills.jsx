@@ -1,10 +1,10 @@
 import { FaReact, FaJava } from "react-icons/fa";
 import { BiLogoSpringBoot } from "react-icons/bi";
 import { IoLogoJavascript } from "react-icons/io5";
-import { FaHtml5, FaCss3, FaBootstrap } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
+import { FaHtml5, FaCss3, FaBootstrap, FaNodeJs, FaDocker } from "react-icons/fa";
+import { SiTypescript, SiMongodb } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
 import { FaGitAlt, FaFigma } from "react-icons/fa6";
 
 export const Skills = () => {
@@ -15,13 +15,17 @@ export const Skills = () => {
         { name: "Typescript", icon: SiTypescript  },
         { name: 'HTML5', icon: FaHtml5 },
         { name: 'CSS3', icon: FaCss3 },
+        { name: "NextJs", icon: RiNextjsFill },
         { name: "React", icon: FaReact },
         { name: "SpringBoot", icon: BiLogoSpringBoot },
+        { name: "NodeJs", icon: FaNodeJs },
         { name: "Git", icon: FaGitAlt },
         { name: "Figma", icon: FaFigma },
         { name: "Tailwind", icon: RiTailwindCssFill },
         { name: "Bootstrap", icon: FaBootstrap },
         { name: 'MySQL', icon: GrMysql },
+        { name: 'MongoDB', icon: SiMongodb },
+        { name: 'Docker', icon: FaDocker },
     ]
 
     return (
