@@ -214,34 +214,34 @@ export const projects = [
             }
         ]
     },
-    {
-        image: calculator,
-        moreMedia: [
-            { type: 'image', link: calculator1 },
-            { type: 'image', link: calculator2 },
-            { type: 'image', link: calculator3 },
-            { type: 'image', link: calculator4 },
-            { type: 'image', link: calculator5 },
-        ],
-        link: "https://github.com/IsraelDev560/calculadora?tab=readme-ov-file",
-        deploy: "https://israeldev560.github.io/calculadora/",
-        title: "Calculadora",
-        showMore: 'calculator',
-        conclued: true,
-        desc: "Este projeto consiste em uma calculadora simples e funcional com 4 operações matemáticas.",
-        icons: [
-            {
-                title: 'JavaScrpipt',
-                icon: IoLogoJavascript
-            },
-            {
-                title: "HTML",
-                icon: FaHtml5
-            },
-            {
-                title: "CSS",
-                icon: FaCss3
-            }
-        ]
-    },
+    // {
+    //     image: calculator,
+    //     moreMedia: [
+    //         { type: 'image', link: calculator1 },
+    //         { type: 'image', link: calculator2 },
+    //         { type: 'image', link: calculator3 },
+    //         { type: 'image', link: calculator4 },
+    //         { type: 'image', link: calculator5 },
+    //     ],
+    //     link: "https://github.com/IsraelDev560/calculadora?tab=readme-ov-file",
+    //     deploy: "https://israeldev560.github.io/calculadora/",
+    //     title: "Calculadora",
+    //     showMore: 'calculator',
+    //     conclued: true,
+    //     desc: "Este projeto consiste em uma calculadora simples e funcional com 4 operações matemáticas.",
+    //     icons: [
+    //         {
+    //             title: 'JavaScrpipt',
+    //             icon: IoLogoJavascript
+    //         },
+    //         {
+    //             title: "HTML",
+    //             icon: FaHtml5
+    //         },
+    //         {
+    //             title: "CSS",
+    //             icon: FaCss3
+    //         }
+    //     ]
+    // },
 ]
