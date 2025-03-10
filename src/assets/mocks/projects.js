@@ -30,11 +30,44 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { FaHtml5, FaCss3, FaBootstrap } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
 import { FaGitAlt, FaFigma } from "react-icons/fa6";
 
 
 export const projects = [
+    {
+        image: "/closedfun/closedfunpost1.png",
+        moreMedia: [
+            { type: 'image', link: "/closedfun/closedfunpost1.png" },
+        ],
+        title: "ClosedFun",
+        showMore: 'Closedfun',
+        conclued: false,
+        realProject: true, 
+        "desc": "ClosedFun é uma plataforma interativa desenvolvida para proporcionar uma experiência imersiva em entretenimento digital. O projeto combina tecnologia moderna com uma interface intuitiva, permitindo aos usuários explorarem conteúdos exclusivos, participarem de eventos e interagirem de forma dinâmica. Construído com Next, TypeScript e TailwindCSS, o ClosedFun prioriza performance, usabilidade e escalabilidade. Durante o desenvolvimento, foram aplicadas técnicas avançadas de otimização e integração para garantir uma experiência fluida e responsiva. Este projeto reforça minha expertise em desenvolvimento web, criação de interfaces interativas e implementação de soluções escaláveis.",
+        icons: [
+            {
+                title: 'Next',
+                icon: RiNextjsFill
+            },
+            {
+                title: 'React',
+                icon: FaReact
+            },
+            {
+                title: "Typescript",
+                icon: SiTypescript
+            },
+            {
+                title: "HTML",
+                icon: FaHtml5
+            },
+            {
+                title: "TailwindCss",
+                icon: RiTailwindCssFill
+            }
+        ]
+    },
     {
         image: vanilla,
         moreMedia: [
@@ -42,7 +75,8 @@ export const projects = [
         ],
         title: "Vanilla App",
         showMore: 'vanillapp',
-        conclued: false, 
+        conclued: false,
+        realProject: true, 
         desc: "Este projeto, desenvolvido com Expo, React Native e TypeScript, é uma aplicação mobile chamada Vanilla, projetada para oferecer uma experiência de mensagens intuitiva e funcional. Ele incorpora funcionalidades como troca de mensagens em tempo real, pré-visualizações dinâmicas de mensagens, suporte a grupos e gerenciamento de conversas, com um foco especial em performance e organização do código. Durante o desenvolvimento, apliquei conceitos avançados de gerenciamento de estado e integração com APIs futuras, garantindo escalabilidade e usabilidade para milhares de usuários. Este projeto foi uma excelente oportunidade para consolidar habilidades em desenvolvimento mobile, interfaces interativas e uso eficiente de TypeScript em um ambiente React Native.",
         icons: [
             {
