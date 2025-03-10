@@ -42,10 +42,10 @@ export const Content = () => {
                         <Typography variant="h4" className="text-gray-800 mb-2 dark:text-white font-semibold">
                             {page.title}
                         </Typography>
-                        <Typography variant="h6" className="text-gray-400 mb-2 font-semibold">
+                        <Typography variant="h6" className="text-gray-700 dark:text-gray-400 mb-2 font-semibold">
                             Status: {page.conclued ? <span className="text-green-600">Concluido.</span> : <span className="text-red-500">Em Desenvolvimento</span>}
                         </Typography>
-                        <Typography variant="h6" className="text-gray-400 mb-2 font-semibold">
+                        <Typography variant="h6" className="text-gray-700 dark:text-gray-400 mb-2 font-semibold">
                             Projeto Real: {page.realProject ? <span className="text-green-600">Sim</span> : <span className="text-red-500">Não</span>}
                         </Typography>
                         <Typography className="text-gray-800 overflow-y-auto scrollbar-hide dark:text-gray-400">
