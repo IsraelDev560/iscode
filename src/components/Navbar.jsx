@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer } from "react"
+import { useState, useEffect, } from "react"
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import { SwitchDefault } from "./utils/Switch";

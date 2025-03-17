@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import image from '../assets/img/wired-lineal-69-eye-hover-blink.gif';
 import { Atom } from './utils/Atom';
 
 export const Apresentation = () => {
@@ -9,7 +7,7 @@ export const Apresentation = () => {
     const links = [
         { icon: FaLinkedin, link: "https://www.linkedin.com/in/israelsantoss/" },
         { icon: FaGithub, link: "https://github.com/IsraelDev560" },
-        { icon: SiGmail, link: "mailto:devisrael560@gmail.com?subject=[CONTATO VIA LINK]" },
+        { icon: SiGmail, link: "mailto:developeriscode@gmail.com?subject=[CONTATO VIA LINK]" },
     ]
 
     return (
