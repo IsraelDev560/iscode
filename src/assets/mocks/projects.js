@@ -44,10 +44,10 @@ export const projects = [
         showMore: 'closedfun',
         conclued: false,
         realProject: true, 
-        desc: "ClosedFun é uma plataforma interativa desenvolvida para proporcionar uma experiência imersiva em entretenimento digital. O projeto combina tecnologia moderna com uma interface intuitiva, permitindo aos usuários explorarem conteúdos exclusivos, participarem de eventos e interagirem de forma dinâmica. Construído com NextJS, TypeScript e TailwindCSS, o ClosedFun prioriza performance, usabilidade e escalabilidade. Durante o desenvolvimento, foram aplicadas técnicas avançadas de otimização e integração para garantir uma experiência fluida e responsiva. Este projeto reforça minha expertise em desenvolvimento web, criação de interfaces interativas e implementação de soluções escaláveis.",
+        desc: "ClosedFun é uma plataforma interativa desenvolvida para proporcionar uma experiência imersiva em entretenimento digital. O projeto combina tecnologia moderna com uma interface intuitiva, permitindo aos usuários explorarem conteúdos exclusivos, participarem de eventos e interagirem de forma dinâmica. Construído com Next.js, TypeScript e TailwindCSS, o ClosedFun prioriza performance, usabilidade e escalabilidade. Durante o desenvolvimento, foram aplicadas técnicas avançadas de otimização e integração para garantir uma experiência fluida e responsiva. Este projeto reforça minha expertise em desenvolvimento web, criação de interfaces interativas e implementação de soluções escaláveis.",
         icons: [
             {
-                title: 'NextJS',
+                title: 'Next.js',
                 icon: RiNextjsFill
             },
             {

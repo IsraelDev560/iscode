@@ -37,7 +37,7 @@ export const About = () => {
                                 >
 
                                     <p>
-                                        No passado, tive a oportunidade de trabalhar como <span className="text-[#AE27F9]">web designer</span> na <span className="text-[#AE27F9]">Potiguar Digital</span>, onde desenvolvi projetos criativos para diferentes nichos de mercado, e também realizei <span className="text-[#AE27F9]">freelas com React.js</span>, entregando soluções sob medida para diversos clientes. Essas experiências me ajudaram a consolidar minhas habilidades técnicas e minha capacidade de resolver problemas com eficiência. <br /><br />
+                                        No passado, tive a oportunidade de trabalhar como <span className="text-[#AE27F9]">Web Designer</span> na <span className="text-[#AE27F9]">Potiguar Digital</span>, onde desenvolvi projetos criativos para diferentes nichos de mercado, e também realizei <span className="text-[#AE27F9]">freelas com Next.js, React.js</span>, entregando soluções sob medida para diversos clientes. Essas experiências me ajudaram a consolidar minhas habilidades técnicas e minha capacidade de resolver problemas com eficiência. <br /><br />
 
                                         Ao longo da minha jornada, me qualifiquei por meio de cursos importantes, como
                                         <span className="text-[#AE27F9]"> Desenvolvedor Fullstack Júnior</span> na <span className="text-[#AE27F9]">MaisPraTi</span>,
