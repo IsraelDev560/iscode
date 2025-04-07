@@ -17,7 +17,7 @@ export function FooterWithLogo() {
               Sobre
             </Typography>
           </li>
-          <li>
+          {/* <li>
             <Typography
               as="a"
               href="#skills"
@@ -26,7 +26,7 @@ export function FooterWithLogo() {
             >
               Skills
             </Typography>
-          </li>
+          </li> */}
           <li>
             <Typography
               as="a"

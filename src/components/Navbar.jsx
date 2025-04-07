@@ -45,7 +45,7 @@ export const Navbar = () => {
 
     const infos = [
         { name: "Sobre", link: "#sobre",  },
-        { name: "Skills", link: "#skills",  },
+        // { name: "Skills", link: "#skills",  },
         { name: "Projetos", link: "#projetos",  },
         { name: "Contato", link: "#contato",  },
     ]

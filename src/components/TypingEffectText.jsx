@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
 
-const TypingEffectText = ({ moreText }) => {
-    const fullText = `
-        Sou Israel Santos, um desenvolvedor fullstack apaixonado por tecnologia e inovação. Atualmente, atuo como desenvolvedor front-end no projeto Vanilla, onde foco na criação de interfaces modernas, responsivas e dinâmicas, proporcionando uma experiência de usuário fluida e intuitiva.
-        `;
+const TypingEffectText = ({ setIsDone }) => {
+    const fullText = `No passado, tive a oportunidade de trabalhar como Web Designer na Potiguar Digital, onde desenvolvi projetos criativos para diferentes nichos de mercado. Também realizei freelas com Next.js e React.js, entregando soluções sob medida para diversos clientes. Essas experiências me ajudaram a consolidar minhas habilidades técnicas e minha capacidade de resolver problemas com eficiência.
+
+Ao longo da minha jornada, me qualifiquei por meio de cursos importantes, como Desenvolvedor Fullstack Júnior na MaisPraTi, Programador Web no Senai e Backend em Java pela DIO.
+
+Essas formações foram fundamentais para construir minha base sólida em desenvolvimento web e aprofundar meus conhecimentos em tecnologias atuais. Estou sempre em busca de novos desafios e oportunidades para aplicar minhas habilidades e crescer ainda mais como profissional, criando soluções que realmente façam a diferença. 🚀`;
 
     const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
@@ -16,7 +19,9 @@ const TypingEffectText = ({ moreText }) => {
             }, 30); 
             return () => clearTimeout(timeout);
         }
-    }, [index, fullText]);
+        console.log("teste");
+        setIsDone(true);
+    }, [index, fullText, setIsDone]);
 
     return (
         <p className="text-lg leading-relaxed text-black dark:text-gray-300 mx-auto lg:max-w-full transition">
@@ -26,7 +31,7 @@ const TypingEffectText = ({ moreText }) => {
                         <span
                             key={i}
                             className={
-                                word.match(/Israel|fullstack|front-end|Vanilla|Potiguar|freelas|MaisPraTi|Senai|DIO/)
+                                word.match(/Israel|fullstack|front-end|Vanilla|Potiguar|Digital|freelas|MaisPraTi|Senai|DIO/)
                                     ? "text-[#AE27F9]"
                                     : ""
                             }

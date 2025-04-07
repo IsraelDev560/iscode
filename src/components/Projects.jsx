@@ -6,7 +6,7 @@ import {
     Typography,
     Button,
     Tooltip,
-    IconButton,
+    // IconButton,
 } from "@material-tailwind/react";
 import { projects } from "../assets/mocks/projects";
 import { ReadMore } from "./utils/Readmore";
@@ -20,7 +20,7 @@ export const Projects = () => {
             <h2 className="text-black items-left lg:mx-auto flex px-6 my-8 dark:text-white text-4xl font-bold text-center">Projetos</h2>
             <div className="grid grid-cols-1 xl:grid-cols-2 mx-auto gap-2 place-items-center lg:max-w-[60vw]">
                 {projects.map((item, index) => (
-                    <Card key={index} className="w-full lg:h-[65vh] bg-transparent max-w-5xl shadow-lg">
+                    <Card key={index} className="w-full bg-transparent max-w-5xl shadow-lg">
                         <CardBody>
                             <div className="flex items-center justify-between">
                                 <Typography variant="h4" className="text-gray-800 mb-3 dark:text-white font-semibold">
@@ -28,8 +28,8 @@ export const Projects = () => {
                                 </Typography>
                             </div>
                             <Typography className="text-gray-800 overflow-y-auto scrollbar-hide dark:text-gray-400">
-                                {item.desc.length > 100 ? (
-                                    <ReadMore text={item.desc} maxLength={100} />
+                                {item.desc.length > 300 ? (
+                                    <ReadMore item={item} text={item.desc} maxLength={300} />
                                 ) : (
                                     item.desc
                                 )}
