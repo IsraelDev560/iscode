@@ -1,7 +1,9 @@
 import { Typography } from "@material-tailwind/react";
-import isCodeSvg from '../assets/img/iscode-no-name.svg' 
+import isCodeSvg from '../assets/img/iscode-no-name.svg'
+import { useLanguage } from "../hooks/useLanguage";
 
 export function FooterWithLogo() {
+  const { t } = useLanguage();
   return (
     <footer className="w-full p-8">
       <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
@@ -14,7 +16,7 @@ export function FooterWithLogo() {
               color="blue-gray"
               className="font-normal transition-colors hover:text-purple-500 text-black dark:text-white focus:text-purple-500"
             >
-              Sobre
+              {t("Sobre")}
             </Typography>
           </li>
           {/* <li>
@@ -34,7 +36,7 @@ export function FooterWithLogo() {
               color="blue-gray"
               className="font-normal transition-colors hover:text-purple-500 text-black dark:text-white focus:text-purple-500"
             >
-              Projetos
+              {t("Projetos")}
             </Typography>
           </li>
           <li>
@@ -44,7 +46,7 @@ export function FooterWithLogo() {
               color="blue-gray"
               className="font-normal  transition-colors hover:text-purple-500 text-black dark:text-white focus:text-purple-500"
             >
-              Contato
+              {t("Contato")}
             </Typography>
           </li>
         </ul>

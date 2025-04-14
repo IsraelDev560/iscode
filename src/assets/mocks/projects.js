@@ -43,6 +43,10 @@ Esse projeto reforça o compromisso da iSCode com a entrega de soluções digita
                 icon: SiTypescript
             },
             {
+                title: "JavaScript",
+                icon: IoLogoJavascript
+            },
+            {
                 title: "HTML",
                 icon: FaHtml5
             },

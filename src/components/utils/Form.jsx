@@ -5,17 +5,19 @@ import {
     Button,
     Typography,
 } from "@material-tailwind/react";
+import { useLanguage } from "../../hooks/useLanguage";
 
 export function Form({ actionForm, state, handleChange, feedback, loading }) {
+    const { t } = useLanguage();
     return (
         <Card className="w-full flex mx-auto" color="transparent" shadow={false}>
             <Typography variant="h4" className="mx-auto text-4xl mt-8 text-black dark:text-white">
-                Entre em <span className="text-[#AE27F9]">contato</span> conosco
+                {t("Entre em")} <span className="text-[#AE27F9]">{t("contato")}</span> {t("conosco")}
             </Typography>
             <form onSubmit={actionForm} className="mt-8 mb-2 w-full max-w-3xl mx-auto">
                 <div className="mb-1 flex flex-col gap-6">
                     <Typography variant="h6" className="text-black dark:text-white -mb-3">
-                        Seu Nome
+                        {t("Seu Nome")}
                     </Typography>
                     <Input
                         size="lg"
@@ -23,7 +25,7 @@ export function Form({ actionForm, state, handleChange, feedback, loading }) {
                         type="name"
                         maxLength={100}
                         value={state.name}
-                        placeholder="ex: Paulo Santos"
+                        placeholder={t("ex: Paulo Santos")}
                         onChange={(e) => handleChange(e)}
                         className=" !border-t-blue-gray-400 focus:!border-t-gray-900 text-black dark:text-white"
                         labelProps={{
@@ -32,7 +34,7 @@ export function Form({ actionForm, state, handleChange, feedback, loading }) {
                     />
                     {state.errors.name && <p className="text-red-500">{state.errors.name}</p>}
                     <Typography variant="h6" className="text-black dark:text-white -mb-3">
-                        Seu Email
+                        {t("Seu Email")}
                     </Typography>
                     <Input
                         size="lg"
@@ -40,7 +42,7 @@ export function Form({ actionForm, state, handleChange, feedback, loading }) {
                         maxLength={50}
                         type="email"
                         value={state.email}
-                        placeholder="name@mail.com"
+                        placeholder={t("name@mail.com")}
                         onChange={(e) => handleChange(e)}
                         className=" !border-t-blue-gray-400 focus:!border-t-gray-900 text-black dark:text-white"
                         labelProps={{
@@ -49,7 +51,7 @@ export function Form({ actionForm, state, handleChange, feedback, loading }) {
                     />
                     {state.errors.email && <p className="text-red-500">{state.errors.email}</p>}
                     <Typography variant="h6" className="text-black dark:text-white -mb-3">
-                        Assunto
+                        {t("Assunto")}
                     </Typography>
                     <Input
                         size="lg"
@@ -57,7 +59,7 @@ export function Form({ actionForm, state, handleChange, feedback, loading }) {
                         type="text"
                         maxLength={35}
                         value={state.subject}
-                        placeholder="ex: PROPOSTA"
+                        placeholder={t("ex: PROPOSTA")}
                         onChange={(e) => handleChange(e)}
                         className=" !border-t-blue-gray-200 focus:!border-t-gray-900 text-black dark:text-white"
                         labelProps={{
@@ -66,7 +68,7 @@ export function Form({ actionForm, state, handleChange, feedback, loading }) {
                     />
                     {state.errors.subject && <p className="text-red-500">{state.errors.subject}</p>}
                     <Typography variant="h6" className="text-black dark:text-white -mb-3">
-                        Mensagem
+                        {t("Mensagem")}
                     </Typography>
                     <Textarea
                         type="textarea"
@@ -74,7 +76,7 @@ export function Form({ actionForm, state, handleChange, feedback, loading }) {
                         name="message"
                         maxLength={560}
                         value={state.message}
-                        placeholder="Olá iSCode eu gostaria..."
+                        placeholder={t("Olá iSCode eu gostaria...")}
                         onChange={(e) => handleChange(e)}
                         className=" !border-t-blue-gray-200 focus:!border-t-gray-900 text-black dark:text-white"
                         labelProps={{
@@ -89,12 +91,12 @@ export function Form({ actionForm, state, handleChange, feedback, loading }) {
                         <div className="flex items-center justify-center">
                             <div className="animate-spin rounded-full h-6 w-6 mr-2 border-t-4 border-[#AE27F9]">
                             </div>
-                            <p className="text-[#AE27F9] text-base font-semibold">Carregando...</p>
+                            <p className="text-[#AE27F9] text-base font-semibold">{t("Carregando...")}</p>
                         </div>
                     </Button>
                 ) : (
                     <Button type="submit" className="mt-6" fullWidth>
-                        Enviar
+                        {t("Enviar")}
                     </Button>
                 )}
             </form>

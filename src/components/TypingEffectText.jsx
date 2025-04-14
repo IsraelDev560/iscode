@@ -1,16 +1,21 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
+import { useLanguage } from "../hooks/useLanguage";
 
 const TypingEffectText = ({ setIsDone }) => {
-    const fullText = `No passado, tive a oportunidade de trabalhar como Web Designer na Potiguar Digital, onde desenvolvi projetos criativos para diferentes nichos de mercado. Também realizei freelas com Next.js e React.js, entregando soluções sob medida para diversos clientes. Essas experiências me ajudaram a consolidar minhas habilidades técnicas e minha capacidade de resolver problemas com eficiência.
-
-Ao longo da minha jornada, me qualifiquei por meio de cursos importantes, como Desenvolvedor Fullstack Júnior na MaisPraTi, Programador Web no Senai e Backend em Java pela DIO.
-
-Essas formações foram fundamentais para construir minha base sólida em desenvolvimento web e aprofundar meus conhecimentos em tecnologias atuais. Estou sempre em busca de novos desafios e oportunidades para aplicar minhas habilidades e crescer ainda mais como profissional, criando soluções que realmente façam a diferença. 🚀`;
-
+    const { i18n, t } = useLanguage();
     const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
-
+    const [fullText, setFullText] = useState("");
+    
+    useEffect(() => {
+        const updatedText = t("No passado, tive a oportunidade de trabalhar como Web Designer na Potiguar Digital, onde desenvolvi projetos criativos para diferentes nichos de mercado. Também realizei freelas com Next.js e React.js, entregando soluções sob medida para diversos clientes. Essas experiências me ajudaram a consolidar minhas habilidades técnicas e minha capacidade de resolver problemas com eficiência.\n\nAo longo da minha jornada, me qualifiquei por meio de cursos importantes, como Desenvolvedor Fullstack Júnior na MaisPraTi, Programador Web no Senai e Backend em Java pela DIO.\n\nEssas formações foram fundamentais para construir minha base sólida em desenvolvimento web e aprofundar meus conhecimentos em tecnologias atuais. Estou sempre em busca de novos desafios e oportunidades para aplicar minhas habilidades e crescer ainda mais como profissional, criando soluções que realmente façam a diferença. 🚀");
+        setFullText(updatedText);
+        setDisplayedText("");
+        setIndex(0);
+        setIsDone(false);
+    }, [i18n.language, setIsDone, t]); // dispara quando o idioma mudar
+    
     useEffect(() => {
         if (index < fullText.length) {
             const timeout = setTimeout(() => {
@@ -19,7 +24,6 @@ Essas formações foram fundamentais para construir minha base sólida em desenv
             }, 30); 
             return () => clearTimeout(timeout);
         }
-        console.log("teste");
         setIsDone(true);
     }, [index, fullText, setIsDone]);
 

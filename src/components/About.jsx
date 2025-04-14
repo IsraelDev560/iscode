@@ -1,10 +1,11 @@
 import { useState } from "react";
 import TypingEffectText from "./TypingEffectText";
 import { AnimatePresence, motion } from "framer-motion";
+import { useLanguage } from "../hooks/useLanguage";
 export const About = () => {
     const [moreText, setMoreText] = useState(false);
     const [isDone, setIsDone] = useState(false);
-
+    const { t } = useLanguage();
     const toggleMoreText = () => {
         if (isDone) return setMoreText(!moreText)
         return setIsDone(false)
@@ -21,10 +22,10 @@ export const About = () => {
 
                 </div>
                 <div className="w-full z-1 relative flex flex-col ">
-                    <h2 className="text-3xl mb-2 text-left font-semibold text-black dark:text-white">Olá, eu me chamo  <span className="font-bold text-[#AE27F9]">Israel</span></h2>
-                    <h2 className="text-2xl mb-5 text-left font-semibold text-black dark:text-white">Desenvolvedor Web Full Stack e <span className="font-bold text-[#AE27F9]">CEO</span> da iS<span className="font-bold text-[#AE27F9]">Code</span>.</h2>
+                    <h2 className="text-3xl mb-2 text-left font-semibold text-black dark:text-white">{t("Olá, eu me chamo")}  <span className="font-bold text-[#AE27F9]">Israel</span></h2>
+                    <h2 className="text-2xl mb-5 text-left font-semibold text-black dark:text-white">{t("Desenvolvedor Web Full Stack e")}<span className="font-bold text-[#AE27F9]"> CEO</span> {t("da")} iS<span className="font-bold text-[#AE27F9]">Code</span>.</h2>
                     <h2 className='text-2xl font-semibold text-black dark:text-white'>
-                        Sobre<span className="text-[#AE27F9]"> mim </span>
+                        {t("Sobre")}<span className="text-[#AE27F9]"> {t("mim")} </span>
                     </h2>
 
                     <span className='text-lg leading-relaxed'>
@@ -40,14 +41,21 @@ export const About = () => {
                                 >
 
                                     <p>
-                                        Diante disso criei a iS<span className="text-[#AE27F9]">Code</span>, somos especialistas em <span className="text-[#AE27F9]">desenvolvimento Full Stack</span>, criando soluções digitais modernas, eficientes e personalizadas para empresas que desejam crescer com tecnologia.
+                                        {t("Diante disso criei a")} iS<span className="text-[#AE27F9]">Code</span>, {t("somos especialistas em")} <span className="text-[#AE27F9]">{t("desenvolvimento Full Stack")}</span>, {t("criando soluções digitais modernas, eficientes e personalizadas para empresas que desejam crescer com tecnologia.")}
+
                                         <br /><br />
-                                        Nossa equipe é formada por profissionais apaixonados por inovação, com ampla experiência em projetos que vão desde interfaces responsivas e intuitivas até sistemas robustos e escaláveis. Atuamos tanto no front-end quanto no back-end, utilizando tecnologias atuais do mercado.
+
+                                        {t("Nossa equipe é formada por profissionais apaixonados por inovação, com ampla experiência em projetos que vão desde interfaces responsivas e intuitivas até sistemas robustos e escaláveis. Atuamos tanto no front-end quanto no back-end, utilizando tecnologias atuais do mercado.")}
+
                                         <br /><br />
-                                        Já desenvolvemos soluções para diversos segmentos — incluindo saúde, educação, direito e comércio — entregando projetos sob medida com foco em performance, usabilidade e resultado. Também acumulamos experiência em empresas como a <span className="text-[#AE27F9]">Potiguar Digital</span> e projetos como o <span className="text-[#AE27F9]">Vanilla</span>, <span className="text-[#AE27F9]">ClosedFun</span>, <span className="text-[#AE27F9]">BarberFlow</span>, que nos permitiram aperfeiçoar ainda mais nosso padrão de qualidade.
+
+                                        {t("Já desenvolvemos soluções para diversos segmentos — incluindo saúde, educação, direito e comércio — entregando projetos sob medida com foco em performance, usabilidade e resultado. Também acumulamos experiência em empresas como a")} <span className="text-[#AE27F9]">Potiguar Digital</span> {t("e projetos como o")} <span className="text-[#AE27F9]">Vanilla</span>, <span className="text-[#AE27F9]">ClosedFun</span>, <span className="text-[#AE27F9]">BarberFlow</span>, {t("que nos permitiram aperfeiçoar ainda mais nosso padrão de qualidade.")}
+
                                         <br /><br />
-                                        Acreditamos que a tecnologia deve <span className="text-[#AE27F9]">simplificar</span>, <span className="text-[#AE27F9]">escalar</span> e <span className="text-[#AE27F9]">impactar de verdade</span> os negócios dos nossos clientes. Por isso, estamos em constante evolução, sempre prontos para novos desafios e projetos transformadores.
+
+                                        {t("Acreditamos que a tecnologia deve")} <span className="text-[#AE27F9]">{t("simplificar")}</span>, <span className="text-[#AE27F9]">{t("escalar")}</span> {t("e")} <span className="text-[#AE27F9]">{t("impactar de verdade")}</span> {t("os negócios dos nossos clientes. Por isso, estamos em constante evolução, sempre prontos para novos desafios e projetos transformadores.")}
                                     </p>
+
 
                                 </motion.div>
                             )}
@@ -62,7 +70,7 @@ export const About = () => {
                               rounded-md transition
                             `}
                     >
-                        {moreText ? "Leia Menos" : "Leia Mais"}
+                        {t(moreText ? "Ler menos" : "Ler mais")}
                     </button>
                 </div>
             </div>
