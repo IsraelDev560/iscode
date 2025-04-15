@@ -68,8 +68,18 @@ export const Navbar = () => {
                         <div className="text-left space-x-4 items-center w-full justify-end flex">
                             <SwitchDefault />
                             {menu ? (<IoMdClose onClick={toggleMenu} className="justify-end text-black dark:text-white text-2xl cursor-pointer transition" />) : (<IoMdMenu onClick={toggleMenu} className="justify-end text-black dark:text-white text-2xl cursor-pointer transition" />)}
+                            <AiOutlineGlobal className="cursor-pointer text-black dark:text-white text-2xl" onClick={() => setIsOpen(!isOpen)} />
+                            {isOpen && (
+                                <div className="absolute border right-0 mt-40 w-40 rounded-md shadow-md z-50">
+                                    <ul
+                                        className="bg-gray-200 dark:bg-[#0A0A0A] rounded-md"
+                                    >
+                                        <li onClick={() => handleChangeLanguage('en-US')} className="p-2 text-black dark:text-white hover:text-[#AE27F9] cursor-pointer">English</li>
+                                        <li onClick={() => handleChangeLanguage("pt-BR")} className="p-2 text-black dark:text-white hover:text-[#AE27F9] cursor-pointer">Português (Brasil)</li>
+                                    </ul>
+                                </div>
+                            )}
                         </div>
-
                         <AnimatePresence>
                             {menu && (
                                 <motion.div
