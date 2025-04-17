@@ -68,7 +68,7 @@ export const useForm = () => {
             setFeedback('');
         }
         if (!state.message) {
-            errorsMessages.message = "Insira uma mensagem para prosseguir";
+            errorsMessages.message = "Insira uma mensagem para prosseguir.";
             setFeedback('');
         }
 
