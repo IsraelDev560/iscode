@@ -1,5 +1,4 @@
 import { Typography } from "@material-tailwind/react";
-import isCodeSvg from '../assets/img/iscode-no-name.svg'
 import { useLanguage } from "../hooks/useLanguage";
 
 export function FooterWithLogo() {
@@ -7,7 +6,7 @@ export function FooterWithLogo() {
   return (
     <footer className="w-full p-8">
       <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
-        <img src={isCodeSvg} alt="logo-ct" className="w-10" />
+        <img src="/iscode-no-name.svg" alt="logo-ct" className="w-10" />
         <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
           <li>
             <Typography

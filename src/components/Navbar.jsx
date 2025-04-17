@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import { SwitchDefault } from "./utils/Switch";
-import isCodeSvg from '../assets/img/iscode-no-name.svg';
 import { AiOutlineGlobal } from 'react-icons/ai';
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../hooks/useLanguage";
@@ -60,7 +59,7 @@ export const Navbar = () => {
                 {isMobile ? (
                     <div className="flex justify-between w-full">
                         <div className="flex space-x-4 items-center">
-                            <img onClick={scrollTop} className="w-8 cursor-pointer" src={isCodeSvg} alt={"SVG ISCODE"} />
+                            <img onClick={scrollTop} className="w-8 cursor-pointer" src="/iscode-no-name.svg" alt={"SVG ISCODE"} />
                             <h2 onClick={scrollTop} className="text-xl cursor-pointer font-bold text-black dark:text-white">
                                 iS<span className="text-[#AE27F9]">Code</span>
                             </h2>
@@ -106,7 +105,7 @@ export const Navbar = () => {
                 ) : (
                     <div className="flex justify-between w-full">
                         <div className="w-xs flex space-x-4 items-center">
-                            <img onClick={scrollTop} className="w-10 cursor-pointer" src={isCodeSvg} alt={"SVG ISCODE"} />
+                            <img onClick={scrollTop} className="w-10 cursor-pointer" src="/iscode-no-name.svg" alt={"SVG ISCODE"} />
                             <h2 onClick={scrollTop} className="text-xl cursor-pointer font-bold text-black dark:text-white">
                                 iS<span className="text-[#AE27F9]">Code</span>
                             </h2>
