@@ -1,9 +1,3 @@
-import ortolab from '../img/projects/ortolab/ortolab.png';
-import ortolab1 from '../img/projects/ortolab/ortolab1.png';
-import ortolab2 from '../img/projects/ortolab/ortolab2.png';
-import ortolab3 from '../img/projects/ortolab/ortolab3.png';
-import vanilla from '../img/projects/vanilla/vanilla.png'
-
 import { FaReact } from "react-icons/fa";
 // import { BiLogoSpringBoot } from "react-icons/bi";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -57,9 +51,9 @@ Esse projeto reforça o compromisso da iSCode com a entrega de soluções digita
         ]
     },
     {
-        image: vanilla,
+        image: '/vanilla/vanilla.png',
         moreMedia: [
-            { type: 'image', link: vanilla },
+            { type: 'image', link: '/vanilla/vanilla.png' },
         ],
         title: "Vanilla App",
         showMore: 'vanillapp',
@@ -89,71 +83,13 @@ O Vanilla representa o compromisso da iSCode com a entrega de soluções mobile 
             }
         ]
     },
-    // {
-    //     image: netflixImage,
-    //     moreMedia: [
-    //         { type: 'image', link: netflixImage },
-    //         { type: 'image', link: netflixImage1 },
-    //         { type: 'image', link: netflixImage2 },
-    //         { type: 'image', link: netflixImage3 },
-    //         { type: 'image', link: netflixImage4 },
-    //         { type: 'image', link: netflixImage5 },
-    //     ],
-    //     link: "https://github.com/IsraelDev560/maisprati-repository/tree/main/React/netflix-tmdb",
-    //     title: "Netflix Clone",
-    //     showMore: 'netflix',
-    //     conclued: false, 
-    //     desc: "Um clone da interface da Netflix desenvolvido com React.js, HTML5 e CSS3, utilizando a API do TMDB (The Movie Database) para exibir informações reais sobre filmes e séries. Este projeto recria elementos-chave da experiência da Netflix, como uma interface moderna, carrosséis de filmes e funcionalidade de destaque para exibir conteúdos em evidência.",
-    //     icons: [
-    //         {
-    //             title: 'React',
-    //             icon: FaReact
-    //         },
-    //         {
-    //             title: "HTML",
-    //             icon: FaHtml5
-    //         },
-    //         {
-    //             title: "CSS",
-    //             icon: FaCss3
-    //         }
-    //     ]
-    // },
-    // {
-    //     image: tecStore,
-    //     moreMedia: [
-    //         { type: 'image', link: tecStore },
-    //         { type: 'image', link: tecStore2 },
-    //         { type: 'image', link: tecStore3 },
-    //     ],
-    //     link: "https://github.com/IsraelDev560/landind-page-maisprati",
-    //     deploy: "https://israeldev560.github.io/landind-page-maisprati/",
-    //     title: "Tec Store",
-    //     showMore: "tecstore",
-    //     conclued: true, 
-    //     desc: "Este projeto consiste em uma Landing Page simples e funcional, desenvolvida como parte dos exercícios do curso Desenvolvedor Júnior Full-Stack +praTI. A página foi construída utilizando HTML, CSS e JavaScript, com foco em boas práticas de design responsivo e organização de código.",
-    //     icons: [
-    //         {
-    //             title: 'JavaScrpipt',
-    //             icon: IoLogoJavascript
-    //         },
-    //         {
-    //             title: "HTML",
-    //             icon: FaHtml5
-    //         },
-    //         {
-    //             title: "CSS",
-    //             icon: FaCss3
-    //         }
-    //     ]
-    // },
     {
-        image: ortolab,
+        image: '/ortolab/ortolab.png',
         moreMedia: [
-            { type: 'image', link: ortolab },
-            { type: 'image', link: ortolab1 },
-            { type: 'image', link: ortolab2 },
-            { type: 'image', link: ortolab3 },
+            { type: 'image', link: '/ortolab/ortolab.png' },
+            { type: 'image', link: '/ortolab/ortolab1.png' },
+            { type: 'image', link: '/ortolab/ortolab2.png' },
+            { type: 'image', link: '/ortolab/ortolab3.png' },
         ],
         link: "https://github.com/IsraelDev560/ortolab-definitive",
         deploy: "https://ortolab.netlify.app//",
@@ -178,64 +114,4 @@ Com foco na experiência do usuário, o Ortolab foi projetado para ser uma ferra
             }
         ]
     },
-    // {
-    //     image: spotify,
-    //     moreMedia: [
-    //         { type: 'image', link: spotify },
-    //         { type: 'image', link: spotify2 },
-    //         { type: 'image', link: spotify3 },
-    //         { type: 'image', link: spotify4 },
-    //         { type: 'image', link: spotify5 },
-    //     ],
-    //     link: "https://github.com/IsraelDev560/spotify-cl",
-    //     deploy: "https://israeldev560.github.io/spotify-cl/",
-    //     title: "Spotify",
-    //     showMore: 'spotify',
-    //     conclued: true,
-    //     desc: "Este projeto é um clone visual do Spotify desenvolvido para aprimorar habilidades em HTML, CSS e JavaScript. Ele apresenta uma interface moderna e responsiva, com elementos inspirados no design original do Spotify, incluindo seções como 'Música para todos', 'O que o Spotify tem?' e 'Fácil'. As funcionalidades foram criadas com foco em design interativo e navegação fluida, proporcionando uma experiência realista de um site de música. O projeto inclui animações, responsividade e um layout visualmente atraente.",
-    //     icons: [
-    //         {
-    //             title: 'JavaScrpipt',
-    //             icon: IoLogoJavascript
-    //         },
-    //         {
-    //             title: "HTML",
-    //             icon: FaHtml5
-    //         },
-    //         {
-    //             title: "CSS",
-    //             icon: FaCss3
-    //         }
-    //     ]
-    // },
-    // {
-    //     image: calculator,
-    //     moreMedia: [
-    //         { type: 'image', link: calculator1 },
-    //         { type: 'image', link: calculator2 },
-    //         { type: 'image', link: calculator3 },
-    //         { type: 'image', link: calculator4 },
-    //         { type: 'image', link: calculator5 },
-    //     ],
-    //     link: "https://github.com/IsraelDev560/calculadora?tab=readme-ov-file",
-    //     deploy: "https://israeldev560.github.io/calculadora/",
-    //     title: "Calculadora",
-    //     showMore: 'calculator',
-    //     conclued: true,
-    //     desc: "Este projeto consiste em uma calculadora simples e funcional com 4 operações matemáticas.",
-    //     icons: [
-    //         {
-    //             title: 'JavaScrpipt',
-    //             icon: IoLogoJavascript
-    //         },
-    //         {
-    //             title: "HTML",
-    //             icon: FaHtml5
-    //         },
-    //         {
-    //             title: "CSS",
-    //             icon: FaCss3
-    //         }
-    //     ]
-    // },
 ]
