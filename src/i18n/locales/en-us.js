@@ -78,5 +78,10 @@ With a focus on user experience, Ortolab was designed to be a practical and educ
         "Repositório": "Repository",
         "Em Desenvolvimento": "In Development",
         "Concluido": "Completed",
+        "Sucesso, email enviado!": "Success, email sent!",
+        "Você deve inserir um nome para prosseguir.": 'You must enter a name to proceed.',
+        "Você deve inserir um email para prosseguir.": "You must enter an email to proceed.",
+        "Insira um assunto para prosseguir.": "Please enter a subject to continue.",
+        "Insira uma mensagem para prosseguir.": "Enter a message to continue."
     }
 }
