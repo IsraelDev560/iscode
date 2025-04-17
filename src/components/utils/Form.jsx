@@ -32,7 +32,7 @@ export function Form({ actionForm, state, handleChange, feedback, loading }) {
                             className: "before:content-none after:content-none",
                         }}
                     />
-                    {state.errors.name && <p className="text-red-500">{state.errors.name}</p>}
+                    {state.errors.name && <p className="text-red-500">{t(state.errors.name)}</p>}
                     <Typography variant="h6" className="text-black dark:text-white -mb-3">
                         {t("Seu Email")}
                     </Typography>
@@ -49,7 +49,7 @@ export function Form({ actionForm, state, handleChange, feedback, loading }) {
                             className: "before:content-none after:content-none",
                         }}
                     />
-                    {state.errors.email && <p className="text-red-500">{state.errors.email}</p>}
+                    {state.errors.email && <p className="text-red-500">{t(state.errors.email)}</p>}
                     <Typography variant="h6" className="text-black dark:text-white -mb-3">
                         {t("Assunto")}
                     </Typography>
@@ -66,7 +66,7 @@ export function Form({ actionForm, state, handleChange, feedback, loading }) {
                             className: "before:content-none after:content-none",
                         }}
                     />
-                    {state.errors.subject && <p className="text-red-500">{state.errors.subject}</p>}
+                    {state.errors.subject && <p className="text-red-500">{t(state.errors.subject)}</p>}
                     <Typography variant="h6" className="text-black dark:text-white -mb-3">
                         {t("Mensagem")}
                     </Typography>
@@ -83,9 +83,9 @@ export function Form({ actionForm, state, handleChange, feedback, loading }) {
                             className: "before:content-none after:content-none",
                         }}
                     />
-                    {state.errors.message && <p className="text-red-500">{state.errors.message}</p>}
+                    {state.errors.message && <p className="text-red-500">{t(state.errors.message)}</p>}
                 </div>
-                {feedback && <p className="text-green-500">{feedback}</p>}
+                {feedback && <p className="text-green-500">{t(feedback)}</p>}
                 {loading ? (
                     <Button className="mt-6" fullWidth>
                         <div className="flex items-center justify-center">
