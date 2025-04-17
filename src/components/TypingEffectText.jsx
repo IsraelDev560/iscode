@@ -14,17 +14,17 @@ const TypingEffectText = ({ setIsDone }) => {
         setDisplayedText("");
         setIndex(0);
         setIsDone(false);
-    }, [i18n.language, setIsDone, t]); // dispara quando o idioma mudar
+    }, [i18n.language, setIsDone, t]);
     
     useEffect(() => {
+        setIsDone(false);
         if (index < fullText.length) {
             const timeout = setTimeout(() => {
                 setDisplayedText((prev) => prev + fullText[index]);
                 setIndex((prev) => prev + 1);
             }, 30); 
             return () => clearTimeout(timeout);
-        }
-        setIsDone(true);
+        } else setIsDone(true);
     }, [index, fullText, setIsDone]);
 
     return (
