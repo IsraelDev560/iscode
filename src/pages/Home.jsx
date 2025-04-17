@@ -1,6 +1,5 @@
 import { Apresentation } from "../components/Apresentation"
 import { About } from "../components/About"
-// import { Skills } from "../components/Skills"
 import { Projects } from "../components/Projects"
 import { FooterWithLogo } from "../components/FooterWithLogo"
 import { Navbar } from "../components/Navbar"
@@ -12,7 +11,6 @@ export const Home = () => {
             <Navbar />
             <Apresentation />
             <About />
-            {/* <Skills /> */}
             <Projects />
             <Contact />
             <FooterWithLogo />
