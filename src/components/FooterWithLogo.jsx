@@ -52,7 +52,7 @@ export function FooterWithLogo() {
       </div>
       <hr className="my-8 border border-gray-300 dark:border-[#242629]" />
       <Typography className="text-center text-black dark:text-white font-semibold">
-        &copy; 2025 iS<span className="text-[#AE27F9]">Code</span>
+        &copy; {new Date().getFullYear()} iS<span className="text-[#AE27F9]">Code</span>
       </Typography>
     </footer>
   );
