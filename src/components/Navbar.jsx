@@ -3,14 +3,14 @@ import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import { SwitchDefault } from "./utils/Switch";
 import { AiOutlineGlobal } from 'react-icons/ai';
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 import { useLanguage } from "../hooks/useLanguage";
 
 export const Navbar = () => {
     const [isMobile, seIsMobile] = useState(window.innerWidth <= 768);
     const [scrolled, setScrolled] = useState(false);
     const [menu, setMenu] = useState(false);
-    const navigate = useNavigate();
+    const router = useRouter();
     const { t, handleChangeLanguage, setIsOpen, isOpen } = useLanguage();
 
     useEffect(() => {
@@ -38,7 +38,7 @@ export const Navbar = () => {
     }, []);
 
     const scrollTop = () => {
-        navigate("/")
+        router.push("/")
         window.scrollTo({
             top: 0,
             behavior: 'smooth'

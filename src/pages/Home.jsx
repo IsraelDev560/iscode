@@ -5,7 +5,7 @@ import { FooterWithLogo } from "../components/FooterWithLogo"
 import { Navbar } from "../components/Navbar"
 import { Contact } from "../components/Contact"
 
-export const Home = () => {
+export default function Home() {
     return (
         <div className="flex flex-col justify-between font-sans bg-gray-200 dark:bg-[#0A0A0A] w-full min-h-screen transition">
             <Navbar />
