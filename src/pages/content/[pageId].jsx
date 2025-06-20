@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useRouter } from "next/router";
 import { projects } from "../assets/mocks/projects";
 import { Navbar } from "../components/Navbar"
 import { IoMdArrowRoundBack } from "react-icons/io";
@@ -15,9 +15,9 @@ import {
 import { CarouselDefault } from "../components/utils/CarouselDefault";
 import { useLanguage } from "../hooks/useLanguage";
 
-export const Content = () => {
-    const navigate = useNavigate();
-    const { pageId } = useParams();
+export default function Content() {
+    const router = useRouter();
+    const { pageId } = router.query;
     const page = projects.find(project => project.showMore === pageId);
 
     if (!page) {
@@ -31,7 +31,7 @@ export const Content = () => {
             <div className="flex flex-col p-2 mt-20 items-center mx-auto">
                 <Card className="w-full bg-transparent max-w-6xl shadow-lg">
                     <div className="mb-3 text-left mt-2 ml-2 flex items-center justify-bewteen space-x-4">
-                        <IoMdArrowRoundBack onClick={() => navigate(-1)} className="text-black dark:text-white ml-1 text-xl cursor-pointer" />
+                        <IoMdArrowRoundBack onClick={() => router.back()} className="text-black dark:text-white ml-1 text-xl cursor-pointer" />
                         <Typography variant="h4" className="text-black dark:text-white font-semibold">
                             {t("Voltar")}
                         </Typography>
