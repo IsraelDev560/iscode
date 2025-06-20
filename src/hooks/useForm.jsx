@@ -94,7 +94,12 @@ export const useForm = () => {
         }
         try {
             setLoading(true)
-            const response = await emailjs.send(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_EMAIL_TEMPLATE_KEY, templateParams, import.meta.env.VITE_PUBLIC_KEY)
+            const response = await emailjs.send(
+                process.env.NEXT_PUBLIC_SERVICE_ID,
+                process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_KEY,
+                templateParams,
+                process.env.NEXT_PUBLIC_PUBLIC_KEY
+            )
             console.log(response.status);
             console.log(response.text);
             setTimeout(() => {
