@@ -22,10 +22,16 @@ export const About = () => {
 
                 </div>
                 <div className="w-full z-1 relative flex flex-col ">
-                    <h2 className="text-3xl mb-2 text-left font-semibold text-black dark:text-white">{t("Olá, eu me chamo")}  <span className="font-bold text-[#AE27F9]">Israel</span></h2>
-                    <h2 className="text-2xl mb-5 text-left font-semibold text-black dark:text-white">{t("Desenvolvedor Web Full Stack e")}<span className="font-bold text-[#AE27F9]"> CEO</span> {t("da")} iS<span className="font-bold text-[#AE27F9]">Code</span>.</h2>
-                    <h2 className='text-2xl font-semibold text-black dark:text-white'>
-                        {t("Sobre")}<span className="text-[#AE27F9]"> {t("mim")} </span>
+                    <h2 className="text-3xl mb-2 text-left font-semibold text-black dark:text-white">
+                        {t("Prazer, somos a")} iS<span className="font-bold text-[#AE27F9]">Code</span>
+                    </h2>
+
+                    <h2 className="text-2xl mb-5 text-left font-semibold text-black dark:text-white">
+                        {t("Uma empresa especializada em")} <span className="font-bold text-[#AE27F9]">desenvolvimento Full Stack</span> {t("e")} <span className="font-bold text-[#AE27F9]">automações inteligentes</span>.
+                    </h2>
+
+                    <h2 className="text-2xl font-semibold text-black dark:text-white">
+                        {t("Sobre")}<span className="text-[#AE27F9]"> {t("nós")} </span>
                     </h2>
 
                     <span className='text-lg leading-relaxed'>
@@ -39,28 +45,28 @@ export const About = () => {
                                     transition={{ type: "spring", stiffness: 100, damping: 15 }}
                                     className="w-full relative z-0 text-black dark:text-gray-300 lg:max-w-full "
                                 >
-
                                     <p>
-                                        {t("Diante disso criei a")} iS<span className="text-[#AE27F9]">Code</span>, {t("somos especialistas em")} <span className="text-[#AE27F9]">{t("desenvolvimento Full Stack")}</span>, {t("criando soluções digitais modernas, eficientes e personalizadas para empresas que desejam crescer com tecnologia.")}
+
+                                        {t("Atuamos em duas frentes principais:")} <span className="text-[#AE27F9]">desenvolvimento de sistemas web e mobile</span> {t("e")} <span className="text-[#AE27F9]">automação de processos com n8n, bots e integrações de API</span>.
 
                                         <br /><br />
 
-                                        {t("Nossa equipe é formada por profissionais apaixonados por inovação, com ampla experiência em projetos que vão desde interfaces responsivas e intuitivas até sistemas robustos e escaláveis. Atuamos tanto no front-end quanto no back-end, utilizando tecnologias atuais do mercado.")}
+                                        {t("Já entregamos projetos robustos para setores como saúde, educação, entretenimento e jurídico. Trabalhamos com tecnologias modernas e com um padrão de qualidade que visa performance, segurança e usabilidade.")}
 
                                         <br /><br />
 
-                                        {t("Já desenvolvemos soluções para diversos segmentos — incluindo saúde, educação, direito e comércio — entregando projetos sob medida com foco em performance, usabilidade e resultado. Também acumulamos experiência em empresas como a")} <span className="text-[#AE27F9]">Potiguar Digital</span> {t("e projetos como o")} <span className="text-[#AE27F9]">Vanilla</span>, <span className="text-[#AE27F9]">ClosedFun</span>, <span className="text-[#AE27F9]">BarberFlow</span>, {t("que nos permitiram aperfeiçoar ainda mais nosso padrão de qualidade.")}
+                                        {t("Nossos destaques incluem projetos como")} <span className="text-[#AE27F9]">ClosedFun</span> {t("e")} <span className="text-[#AE27F9]">Vanilla</span> — {t("todos desenvolvidos com foco em experiência do usuário, escalabilidade e entrega de valor real.")}
 
                                         <br /><br />
 
-                                        {t("Acreditamos que a tecnologia deve")} <span className="text-[#AE27F9]">{t("simplificar")}</span>, <span className="text-[#AE27F9]">{t("escalar")}</span> {t("e")} <span className="text-[#AE27F9]">{t("impactar de verdade")}</span> {t("os negócios dos nossos clientes. Por isso, estamos em constante evolução, sempre prontos para novos desafios e projetos transformadores.")}
+                                        {t("Acreditamos que a tecnologia deve")} <span className="text-[#AE27F9]">{t("simplificar")}</span>, <span className="text-[#AE27F9]">{t("automatizar")}</span> {t("e")} <span className="text-[#AE27F9]">{t("impulsionar resultados")}</span>. {t("Por isso, unimos código e estratégia para transformar ideias em soluções que realmente fazem a diferença.")}
+
                                     </p>
-
-
                                 </motion.div>
                             )}
                         </AnimatePresence>
                     </span>
+
                     <button
                         id="skills"
                         onClick={toggleMoreText}

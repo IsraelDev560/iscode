@@ -7,22 +7,22 @@ const TypingEffectText = ({ setIsDone }) => {
     const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
     const [fullText, setFullText] = useState("");
-    
+
     useEffect(() => {
-        const updatedText = t("No passado, tive a oportunidade de trabalhar como Web Designer na Potiguar Digital, onde desenvolvi projetos criativos para diferentes nichos de mercado. Também realizei freelas com Next.js e React.js, entregando soluções sob medida para diversos clientes. Essas experiências me ajudaram a consolidar minhas habilidades técnicas e minha capacidade de resolver problemas com eficiência.\n\nAo longo da minha jornada, me qualifiquei por meio de cursos importantes, como Desenvolvedor Fullstack Júnior na MaisPraTi, Programador Web no Senai e Backend em Java pela DIO.\n\nEssas formações foram fundamentais para construir minha base sólida em desenvolvimento web e aprofundar meus conhecimentos em tecnologias atuais. Estou sempre em busca de novos desafios e oportunidades para aplicar minhas habilidades e crescer ainda mais como profissional, criando soluções que realmente façam a diferença. 🚀");
+        const updatedText = t("Fundada por Israel apaixonado por inovação, a iSCode nasceu com o propósito de entregar soluções digitais personalizadas para empresas de diferentes tamanhos e segmentos. Ao longo da nossa trajetória, atuamos em projetos que envolvem desde a criação de interfaces intuitivas até sistemas complexos e integrações automatizadas com alto desempenho.\n\nNossa equipe combina conhecimento técnico com visão de negócio, sempre buscando criar soluções que agreguem valor, otimizem processos e proporcionem crescimento real para os nossos clientes. 🚀");
         setFullText(updatedText);
         setDisplayedText("");
         setIndex(0);
         setIsDone(false);
     }, [i18n.language, setIsDone, t]);
-    
+
     useEffect(() => {
         setIsDone(false);
         if (index < fullText.length) {
             const timeout = setTimeout(() => {
                 setDisplayedText((prev) => prev + fullText[index]);
                 setIndex((prev) => prev + 1);
-            }, 30); 
+            }, 30);
             return () => clearTimeout(timeout);
         } else setIsDone(true);
     }, [index, fullText, setIsDone]);
