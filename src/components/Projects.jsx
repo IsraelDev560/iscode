@@ -6,21 +6,22 @@ import {
     Typography,
     Button,
     Tooltip,
-    IconButton,
+    // IconButton,
 } from "@material-tailwind/react";
 import { projects } from "../assets/mocks/projects";
 import { ReadMore } from "./utils/Readmore";
 import { useNavigate } from "react-router-dom";
-
+import { useLanguage } from "../hooks/useLanguage";
 
 export const Projects = () => {
+    const { t } = useLanguage();
     const navigate = useNavigate();
     return (
         <div id="projetos" className="w-full flex flex-col">
-            <h2 className="text-black items-left lg:mx-auto flex px-6 my-8 dark:text-white text-4xl font-bold text-center">Projetos</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto gap-2 place-items-center lg:max-w-[60%]">
+            <h2 className="text-black items-left lg:mx-auto flex px-6 my-8 dark:text-white text-4xl font-bold text-center">{t("Projetos")}</h2>
+            <div className="grid grid-cols-1 xl:grid-cols-2 mx-auto gap-2 place-items-center lg:max-w-[60vw]">
                 {projects.map((item, index) => (
-                    <Card key={index} className="w-full lg:h-[65vh] bg-transparent max-w-5xl shadow-lg">
+                    <Card key={index} className="w-full bg-transparent max-w-5xl shadow-lg">
                         <CardBody>
                             <div className="flex items-center justify-between">
                                 <Typography variant="h4" className="text-gray-800 mb-3 dark:text-white font-semibold">
@@ -28,11 +29,9 @@ export const Projects = () => {
                                 </Typography>
                             </div>
                             <Typography className="text-gray-800 overflow-y-auto scrollbar-hide dark:text-gray-400">
-                                {item.desc.length > 100 ? (
-                                    <ReadMore text={item.desc} maxLength={100} />
-                                ) : (
-                                    item.desc
-                                )}
+                                {item.desc.length > 300 ? (
+                                    <ReadMore item={item} text={t(item.desc)} maxLength={300} />
+                                ) : t(item.desc)}
                             </Typography>
                             <div className="group mt-5 inline-flex flex-wrap items-center gap-3">
                                 {item.icons.map((prop, index) => {
@@ -50,6 +49,7 @@ export const Projects = () => {
                         <CardHeader floated={false} color="blue-gray">
                             <img
                                 src={item.image}
+                                loading="lazy"
                                 className="object-contain w-full h-auto"
                                 alt="ui/ux review check"
                             />
@@ -59,7 +59,7 @@ export const Projects = () => {
                         <CardFooter className="mt-5">
                             <Button size="lg" className="text-black bg-gray-400 dark:bg-[#141414FF] dark:text-white" fullWidth={true}>
                                 <p onClick={() => navigate(`/content/${item.showMore}`)}>
-                                    Ver mais
+                                    {t("Ver mais")}
                                 </p>
                             </Button>
                         </CardFooter>

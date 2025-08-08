@@ -1,22 +1,31 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
+import { useLanguage } from "../hooks/useLanguage";
 
-const TypingEffectText = ({ moreText }) => {
-    const fullText = `
-        Sou Israel Santos, um desenvolvedor fullstack apaixonado por tecnologia e inovação. Atualmente, atuo como desenvolvedor front-end no projeto Vanilla, onde foco na criação de interfaces modernas, responsivas e dinâmicas, proporcionando uma experiência de usuário fluida e intuitiva.
-        `;
-
+const TypingEffectText = ({ setIsDone }) => {
+    const { i18n, t } = useLanguage();
     const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
+    const [fullText, setFullText] = useState("");
 
     useEffect(() => {
+        const updatedText = t("Fundada por Israel apaixonado por inovação, a iSCode nasceu com o propósito de entregar soluções digitais personalizadas para empresas de diferentes tamanhos e segmentos. Ao longo da nossa trajetória, atuamos em projetos que envolvem desde a criação de interfaces intuitivas até sistemas complexos e integrações automatizadas com alto desempenho.\n\nNossa equipe combina conhecimento técnico com visão de negócio, sempre buscando criar soluções que agreguem valor, otimizem processos e proporcionem crescimento real para os nossos clientes. 🚀");
+        setFullText(updatedText);
+        setDisplayedText("");
+        setIndex(0);
+        setIsDone(false);
+    }, [i18n.language, setIsDone, t]);
+
+    useEffect(() => {
+        setIsDone(false);
         if (index < fullText.length) {
             const timeout = setTimeout(() => {
                 setDisplayedText((prev) => prev + fullText[index]);
                 setIndex((prev) => prev + 1);
-            }, 30); 
+            }, 30);
             return () => clearTimeout(timeout);
-        }
-    }, [index, fullText]);
+        } else setIsDone(true);
+    }, [index, fullText, setIsDone]);
 
     return (
         <p className="text-lg leading-relaxed text-black dark:text-gray-300 mx-auto lg:max-w-full transition">
@@ -26,7 +35,7 @@ const TypingEffectText = ({ moreText }) => {
                         <span
                             key={i}
                             className={
-                                word.match(/Israel|fullstack|front-end|Vanilla|Potiguar|freelas|MaisPraTi|Senai|DIO/)
+                                word.match(/Israel|fullstack|front-end|Vanilla|Potiguar|Digital|freelas|MaisPraTi|Senai|DIO/)
                                     ? "text-[#AE27F9]"
                                     : ""
                             }

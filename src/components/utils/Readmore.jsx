@@ -1,18 +1,20 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useLanguage } from '../../hooks/useLanguage';
 
-export const ReadMore = ({ text, maxLength = 100 }) => {
+export const ReadMore = ({ item, text, maxLength = 300 }) => {
     const [isExpanded, setIsExpanded] = useState(false);
-
-    const toggleReadMore = () => {
-        setIsExpanded(!isExpanded);
-    };
+     const navigate = useNavigate();
+    const { t } = useLanguage(); 
 
     return (
         <span>
             {isExpanded ? text : text.slice(0, maxLength) + (text.length > maxLength ? "..." : "")}
             {text.length > maxLength && (
-                <button onClick={toggleReadMore} className="lg:ml-2 underline cursor-pointer">
-                    {isExpanded ? " Ler menos" : " Ler mais"}
+                <button onClick={() => navigate(`/content/${item.showMore}`)} className="lg:ml-2 underline cursor-pointer">
+                    {t(isExpanded ? "Ler menos" : "Ler mais")}
                 </button>
             )}
         </span>
