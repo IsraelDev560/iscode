@@ -55,6 +55,7 @@ export function CarouselDefault({ media }) {
                     {item.type === 'image' && (
                         <img
                             src={item.link}
+                            loading="lazy"
                             alt="image 1"
                             className="h-[30vh] lg:h-full w-full object-cover"
                         />

@@ -1,15 +1,17 @@
-import React, { useState, useEffect, useReducer } from "react"
+import { useState, useEffect } from "react"
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import { SwitchDefault } from "./utils/Switch";
-import isCodeSvg from '../assets/img/iscode-no-name.svg';
+import { AiOutlineGlobal } from 'react-icons/ai';
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "../hooks/useLanguage";
 
 export const Navbar = () => {
     const [isMobile, seIsMobile] = useState(window.innerWidth <= 768);
     const [scrolled, setScrolled] = useState(false);
     const [menu, setMenu] = useState(false);
     const navigate = useNavigate();
+    const { t, handleChangeLanguage, setIsOpen, isOpen } = useLanguage();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -44,10 +46,10 @@ export const Navbar = () => {
     }
 
     const infos = [
-        { name: "Sobre", link: "#sobre",  },
-        { name: "Skills", link: "#skills",  },
-        { name: "Projetos", link: "#projetos",  },
-        { name: "Contato", link: "#contato",  },
+        { name: `${t('Sobre')}`, link: "#sobre", },
+        // { name: "Skills", link: "#skills",  },
+        { name: `${t("Projetos")}`, link: "#projetos", },
+        { name: `${t("Contato")}`, link: "#contato", },
     ]
 
     return (
@@ -56,8 +58,8 @@ export const Navbar = () => {
             <div className="flex w-full">
                 {isMobile ? (
                     <div className="flex justify-between w-full">
-                         <div className="flex space-x-4 items-center">
-                            <img onClick={scrollTop} className="w-8 cursor-pointer" src={isCodeSvg} alt={"SVG ISCODE"} />
+                        <div className="flex space-x-4 items-center">
+                            <img onClick={scrollTop} className="w-8 cursor-pointer" src="/iscode-no-name.svg" alt={"SVG ISCODE"} />
                             <h2 onClick={scrollTop} className="text-xl cursor-pointer font-bold text-black dark:text-white">
                                 iS<span className="text-[#AE27F9]">Code</span>
                             </h2>
@@ -65,8 +67,18 @@ export const Navbar = () => {
                         <div className="text-left space-x-4 items-center w-full justify-end flex">
                             <SwitchDefault />
                             {menu ? (<IoMdClose onClick={toggleMenu} className="justify-end text-black dark:text-white text-2xl cursor-pointer transition" />) : (<IoMdMenu onClick={toggleMenu} className="justify-end text-black dark:text-white text-2xl cursor-pointer transition" />)}
+                            <AiOutlineGlobal className="cursor-pointer text-black dark:text-white text-2xl" onClick={() => setIsOpen(!isOpen)} />
+                            {isOpen && (
+                                <div className="absolute border right-0 mt-40 w-40 rounded-md shadow-md z-50">
+                                    <ul
+                                        className="bg-gray-200 dark:bg-[#0A0A0A] rounded-md"
+                                    >
+                                        <li onClick={() => handleChangeLanguage('en-US')} className="p-2 text-black dark:text-white hover:text-[#AE27F9] cursor-pointer">English</li>
+                                        <li onClick={() => handleChangeLanguage("pt-BR")} className="p-2 text-black dark:text-white hover:text-[#AE27F9] cursor-pointer">Português (Brasil)</li>
+                                    </ul>
+                                </div>
+                            )}
                         </div>
-
                         <AnimatePresence>
                             {menu && (
                                 <motion.div
@@ -80,7 +92,7 @@ export const Navbar = () => {
                                         <span onClick={scrollTop} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">Home</span>
                                         {infos.map((item, index) => (
                                             <li key={index}>
-                                                <a href={item.link} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">
+                                                <a onClick={scrollTop} href={item.link} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">
                                                     {item.name}
                                                 </a>
                                             </li>
@@ -93,24 +105,37 @@ export const Navbar = () => {
                 ) : (
                     <div className="flex justify-between w-full">
                         <div className="w-xs flex space-x-4 items-center">
-                            <img onClick={scrollTop} className="w-10 cursor-pointer" src={isCodeSvg} alt={"SVG ISCODE"} />
+                            <img onClick={scrollTop} className="w-10 cursor-pointer" src="/iscode-no-name.svg" alt={"SVG ISCODE"} />
                             <h2 onClick={scrollTop} className="text-xl cursor-pointer font-bold text-black dark:text-white">
                                 iS<span className="text-[#AE27F9]">Code</span>
                             </h2>
                         </div>
-                        <ul className="flex space-x-4 text-black dark:text-white text-xl justify-between">
+                        <div className="flex space-x-4 text-black dark:text-white text-xl items-center justify-between">
                             <span onClick={scrollTop} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">Home</span>
                             {infos.map((item, index) => (
-                                <li key={index}>
-                                    <a onClick={item.action} href={item.link} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">
+                                <p key={index}>
+                                    <a onClick={scrollTop} href={item.link} className="hover:text-[#AE27F9] transition cursor-pointer hover:underline">
                                         {item.name}
                                     </a>
-                                </li>
+                                </p>
                             ))}
                             <div className="mt-0.5">
                                 <SwitchDefault />
                             </div>
-                        </ul>
+                            <div className='relative flex justify-center items-center space-x-4'>
+                                <AiOutlineGlobal className="cursor-pointer" onClick={() => setIsOpen(!isOpen)} />
+                                {isOpen && (
+                                    <div className="absolute border right-0 mt-48 w-40 rounded-md shadow-md z-50">
+                                        <ul
+                                            className="bg-gray-200 dark:bg-[#0A0A0A] rounded-md"
+                                        >
+                                            <li onClick={() => handleChangeLanguage('en-US')} className="p-2 hover:text-[#AE27F9] cursor-pointer">English</li>
+                                            <li onClick={() => handleChangeLanguage("pt-BR")} className="p-2 hover:text-[#AE27F9] cursor-pointer">Português (Brasil)</li>
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
                     </div>
                 )}
             </div>

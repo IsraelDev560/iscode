@@ -1,19 +1,19 @@
-import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { projects } from "../assets/mocks/projects";
 import { Navbar } from "../components/Navbar"
 import { IoMdArrowRoundBack } from "react-icons/io";
 import {
     Card,
-    CardHeader,
+    // CardHeader,
     CardBody,
     CardFooter,
     Typography,
     Button,
     Tooltip,
-    IconButton,
+    // IconButton,
 } from "@material-tailwind/react";
 import { CarouselDefault } from "../components/utils/CarouselDefault";
+import { useLanguage } from "../hooks/useLanguage";
 
 export const Content = () => {
     const navigate = useNavigate();
@@ -23,6 +23,7 @@ export const Content = () => {
     if (!page) {
         console.error("Page not found");
     }
+    const { t } = useLanguage();
 
     return (
         <div className="flex flex-col justify-between font-sans bg-gray-200 dark:bg-[#0A0A0A] w-full min-h-screen h-full transition">
@@ -32,7 +33,7 @@ export const Content = () => {
                     <div className="mb-3 text-left mt-2 ml-2 flex items-center justify-bewteen space-x-4">
                         <IoMdArrowRoundBack onClick={() => navigate(-1)} className="text-black dark:text-white ml-1 text-xl cursor-pointer" />
                         <Typography variant="h4" className="text-black dark:text-white font-semibold">
-                            Voltar
+                            {t("Voltar")}
                         </Typography>
                     </div>
                     <div className="p-2">
@@ -42,11 +43,14 @@ export const Content = () => {
                         <Typography variant="h4" className="text-gray-800 mb-2 dark:text-white font-semibold">
                             {page.title}
                         </Typography>
-                        <Typography variant="h6" className="text-gray-400 mb-2 font-semibold">
-                            Status: {page.conclued ? <span className="text-green-600">Concluido.</span> : <span className="text-red-500">Em Desenvolvimento</span>}
+                        <Typography variant="h6" className="text-gray-700 dark:text-gray-400 mb-2 font-semibold">
+                            Status: {page.conclued ? <span className="text-green-600">{t("Concluido")}.</span> : <span className="text-red-500">{t("Em Desenvolvimento")}</span>}
                         </Typography>
+                        {/* <Typography variant="h6" className="text-gray-700 dark:text-gray-400 mb-2 font-semibold">
+                            Projeto Real: {page.realProject ? <span className="text-green-600">Sim</span> : <span className="text-red-500">Não</span>}
+                        </Typography> */}
                         <Typography className="text-gray-800 overflow-y-auto scrollbar-hide dark:text-gray-400">
-                            {page.desc}
+                            {t(page.desc)}
                         </Typography>
                         <div className="group mt-5 inline-flex flex-wrap items-center gap-3">
                             {page.icons.map((prop, index) => {
@@ -65,13 +69,13 @@ export const Content = () => {
                         {page.link ? (
                             <Button size="lg" className="text-black bg-gray-400 dark:bg-[#141414FF] dark:text-white" fullWidth={true}>
                                 <a href={page.link} rel="noreferrer" target="__blank">
-                                    Repositório
+                                    {t("Repositório")}
                                 </a>
                             </Button>
                         ) : (
                             <Button size="lg" className={`text-black bg-red-400 dark:text-white`} disabled fullWidth={true}>
                                 <p>
-                                    Repositório indisponível
+                                    {t("Repositório indisponível")}
                                 </p>
                             </Button>
                         )}
@@ -84,7 +88,7 @@ export const Content = () => {
                         ) : (
                             <Button size="lg" className={`text-black bg-red-400 dark:text-white`} disabled fullWidth={true}>
                                 <p>
-                                    Deploy indisponível
+                                    {t("Deploy indisponível")}
                                 </p>
                             </Button>
                         )}
