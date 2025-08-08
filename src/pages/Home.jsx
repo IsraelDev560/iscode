@@ -1,10 +1,19 @@
 import { Apresentation } from "../components/Apresentation"
 import { About } from "../components/About"
 import { Skills } from "../components/Skills"
-import { Projects } from "../components/Projects"
+import { Solutions } from "../components/Solutions"
 import { FooterWithLogo } from "../components/FooterWithLogo"
 import { Navbar } from "../components/Navbar"
 import { Contact } from "../components/Contact"
+
+const FloatingCTA = () => (
+  <a 
+    href="#contato"
+    className="fixed bottom-8 right-8 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 z-50"
+  >
+    Quero automatizar meu negócio!
+  </a>
+);
 
 export const Home = () => {
     return (
@@ -13,9 +22,10 @@ export const Home = () => {
             <Apresentation />
             <About />
             <Skills />
-            <Projects />
+            <Solutions />
             <Contact />
             <FooterWithLogo />
+            <FloatingCTA />
         </div>
     )
 }
