@@ -48,7 +48,7 @@ export const Navbar = () => {
     const infos = [
         { name: `${t('Sobre')}`, link: "#sobre", },
         // { name: "Skills", link: "#skills",  },
-        { name: `${t("Projetos")}`, link: "#projetos", },
+        { name: `${t("Solucoes")}`, link: "#solucoes", },
         { name: `${t("Contato")}`, link: "#contato", },
     ]
 

@@ -31,11 +31,11 @@ export function FooterWithLogo() {
           <li>
             <Typography
               as="a"
-              href="#projetos"
+              href="#solucoes"
               color="blue-gray"
               className="font-normal transition-colors hover:text-purple-500 text-black dark:text-white focus:text-purple-500"
             >
-              {t("Projetos")}
+              {t("Solucoes")}
             </Typography>
           </li>
           <li>

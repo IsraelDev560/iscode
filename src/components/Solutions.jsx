@@ -1,4 +1,3 @@
-import React from 'react';
 import { solutions } from '../assets/mocks/solutions';
 
 export const Solutions = () => {
@@ -21,7 +20,13 @@ export const Solutions = () => {
                   <h3 className="text-xl font-bold text-white mb-2">{solution.title}</h3>
                   <p className="text-gray-300 text-sm">{solution.description}</p>
                 </div>
-                {/* Verso do Card */}                <div className="absolute rotate-y-180 backface-hidden w-full h-full bg-gradient-to-br from-purple-900 to-pink-900/70 backdrop-blur-lg border border-pink-500/50 rounded-lg p-6 flex flex-col items-center justify-center text-center">                  <h4 className="text-lg font-bold text-white mb-3">Impacto Real</h4>                  <p className="text-pink-300 italic">"{solution.impact}"</p>                  <a href={solution.caseLink} className="mt-4 bg-pink-500 text-white font-bold py-2 px-4 rounded-full hover:bg-pink-600 transition-colors duration-300">                    Veja como                  </a>                </div>
+                <div className="absolute rotate-y-180 backface-hidden w-full h-full bg-gradient-to-br from-purple-900 to-pink-900/70 backdrop-blur-lg border border-pink-500/50 rounded-lg p-6 flex flex-col items-center justify-center text-center">
+                  <h4 className="text-lg font-bold text-white mb-3">Impacto Real</h4>
+                  <p className="text-pink-300 italic">"{solution.impact}"</p>
+                  <a href={solution.caseLink} className="mt-4 bg-pink-500 text-white font-bold py-2 px-4 rounded-full hover:bg-pink-600 transition-colors duration-300">
+                    Veja como
+                  </a>
+                </div>
               </div>
             </div>
           );
