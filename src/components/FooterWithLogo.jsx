@@ -35,7 +35,7 @@ export function FooterWithLogo() {
               color="blue-gray"
               className="font-normal transition-colors hover:text-purple-500 text-black dark:text-white focus:text-purple-500"
             >
-              {t("Solucoes")}
+              {t("Soluções")}
             </Typography>
           </li>
           <li>

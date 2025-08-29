@@ -2,7 +2,7 @@ export default {
     "translations": {
         "Início": "Home",
         "Sobre": "About",
-        "Projetos": "Projects",
+        "Soluções": "Solutions",
         "Contato": "Contact",
         "Bem-vindo ao iSCode": "Welcome to iSCode",
         "Desenvolvedor Front-End": "Front-End Developer",
