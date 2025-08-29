@@ -15,13 +15,15 @@ export const SolutionPage = () => {
     setIsVisible(true);
   }, []);
 
-  const scrollTop = () => {
-    navigate("/")
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
+  const scrollToSection = (section) => {
+    navigate('/');
+    setTimeout(() => {
+      const element = document.getElementById(section);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
 
   // Página de "Não Encontrado" com estilos para ambos os temas
   if (!solution) {
@@ -61,8 +63,8 @@ export const SolutionPage = () => {
           {/* Breadcrumb */}
           <div className={`transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
             <Link
-              onClick={scrollTop}
-              to="#solucoes"
+              onClick={() => scrollToSection('solucoes')}
+              to="/"
               className="inline-flex items-center mt-14 gap-2 text-purple-600 dark:text-[#AE27F9] hover:text-pink-600 dark:hover:text-[#7B1FA2] mb-12 transition-all duration-300 group"
             >
               <FaArrowLeft className="group-hover:-translate-x-1 transition-transform duration-300" />

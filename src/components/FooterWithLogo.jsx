@@ -1,52 +1,52 @@
 import { Typography } from "@material-tailwind/react";
 import { useLanguage } from "../hooks/useLanguage";
+import { Link, useNavigate } from "react-router-dom";
 
 export function FooterWithLogo() {
   const { t } = useLanguage();
+  const navigate = useNavigate();
+
+  const scrollToSection = (section) => {
+    navigate('/');
+    setTimeout(() => {
+      const element = document.getElementById(section);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   return (
     <footer className="w-full p-8">
       <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
         <img src="/iscode-no-name.svg" alt="logo-ct" className="w-10" />
         <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
           <li>
-            <Typography
-              as="a"
-              href="#sobre"
-              color="blue-gray"
+            <Link
+              to="/"
+              onClick={() => scrollToSection('sobre')}
               className="font-normal transition-colors hover:text-purple-500 text-black dark:text-white focus:text-purple-500"
             >
               {t("Sobre")}
-            </Typography>
+            </Link>
           </li>
-          {/* <li>
-            <Typography
-              as="a"
-              href="#skills"
-              color="blue-gray"
-              className="font-normal transition-colors hover:text-purple-500 text-black dark:text-white focus:text-purple-500"
-            >
-              Skills
-            </Typography>
-          </li> */}
           <li>
-            <Typography
-              as="a"
-              href="#solucoes"
-              color="blue-gray"
+            <Link
+              to="/"
+              onClick={() => scrollToSection('solucoes')}
               className="font-normal transition-colors hover:text-purple-500 text-black dark:text-white focus:text-purple-500"
             >
               {t("Soluções")}
-            </Typography>
+            </Link>
           </li>
           <li>
-            <Typography
-              as="a"
-              href="#contato"
-              color="blue-gray"
-              className="font-normal  transition-colors hover:text-purple-500 text-black dark:text-white focus:text-purple-500"
+            <Link
+              to="/"
+              onClick={() => scrollToSection('contato')}
+              className="font-normal transition-colors hover:text-purple-500 text-black dark:text-white focus:text-purple-500"
             >
               {t("Contato")}
-            </Typography>
+            </Link>
           </li>
         </ul>
       </div>
