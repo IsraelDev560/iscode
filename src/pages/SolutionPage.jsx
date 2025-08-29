@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { solutions } from '../assets/mocks/solutions';
 import { Navbar } from '../components/Navbar';
 import { FooterWithLogo } from '../components/FooterWithLogo';
@@ -9,10 +9,19 @@ export const SolutionPage = () => {
   const { solutionId } = useParams();
   const solution = solutions.find(s => s.caseLink === `/solutions/${solutionId}`);
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const scrollTop = () => {
+    navigate("/")
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
 
   // Página de "Não Encontrado" com estilos para ambos os temas
   if (!solution) {
@@ -29,8 +38,8 @@ export const SolutionPage = () => {
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-md mt-4">
             A solução que você procura não existe ou foi movida.
           </p>
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="mt-8 inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 dark:from-[#AE27F9] dark:to-[#7B1FA2] hover:from-pink-500 hover:to-purple-500 dark:hover:from-[#7B1FA2] dark:hover:to-[#AE27F9] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg dark:hover:shadow-[#AE27F9]/25"
           >
             <FaArrowLeft />
@@ -51,8 +60,9 @@ export const SolutionPage = () => {
         <div className="max-w-6xl mx-auto">
           {/* Breadcrumb */}
           <div className={`transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <Link 
-              to="/#solucoes" 
+            <Link
+              onClick={scrollTop}
+              to="#solucoes"
               className="inline-flex items-center mt-14 gap-2 text-purple-600 dark:text-[#AE27F9] hover:text-pink-600 dark:hover:text-[#7B1FA2] mb-12 transition-all duration-300 group"
             >
               <FaArrowLeft className="group-hover:-translate-x-1 transition-transform duration-300" />
@@ -120,7 +130,7 @@ export const SolutionPage = () => {
                 </div>
                 <div className="space-y-4">
                   {solution.benefits?.map((benefit, index) => (
-                    <div 
+                    <div
                       key={index}
                       className="flex items-start gap-3 p-3 rounded-lg hover:bg-purple-50 dark:hover:bg-[#AE27F9]/10 transition-all duration-300 transform hover:translate-x-1 dark:hover:translate-x-2"
                     >
