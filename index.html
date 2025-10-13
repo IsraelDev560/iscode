@@ -1,70 +1,176 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- Title otimizado (até ~60 caracteres) -->
-  <title>iSCode | Soluções Web & Desenvolvimento Full-Stack</title>
+  <!-- Title otimizado (55-60 caracteres) -->
+  <title>iSCode - Desenvolvimento Web Full-Stack | React & Next.js</title>
 
-  <!-- Meta description persuasiva (até ~155 caracteres) -->
+  <!-- Meta description persuasiva e otimizada (150-160 caracteres) -->
   <meta name="description"
-    content="iSCode: Desenvolvimento web e apps de alta performance em React, Next.js, Java, Spring Boot e Tailwind. Transforme ideias em código de verdade!" />
+    content="Desenvolvimento de aplicações web e mobile de alto desempenho. Especialistas em React, Next.js, Java e Spring Boot. Transformamos sua ideia em realidade digital." />
 
-  <!-- Palavras-chave estratégicas (menor peso hoje em dia) -->
-  <meta name="keywords"
-    content="desenvolvimento web, React, Next.js, Java, Spring Boot, Tailwind CSS, JavaScript, TypeScript, SaaS, agência de software" />
+  <!-- Author e Creator -->
+  <meta name="author" content="iSCode" />
+  <meta name="creator" content="iSCode Development Team" />
 
   <!-- Controle de indexação -->
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
 
-  <!-- Open Graph (para compartilhamento social) -->
-  <meta property="og:title" content="iSCode | Soluções Web & Desenvolvimento Full-Stack" />
+  <!-- Geo tags (ajuste conforme sua localização) -->
+  <meta name="geo.region" content="BR-BA" />
+  <meta name="geo.placename" content="Feira de Santana" />
+
+  <!-- Language alternates (adicione se tiver versões em outros idiomas) -->
+  <link rel="alternate" hreflang="pt-BR" href="https://iscode.vercel.app" />
+  <link rel="alternate" hreflang="x-default" href="https://iscode.vercel.app" />
+
+  <!-- Open Graph otimizado -->
+  <meta property="og:site_name" content="iSCode" />
+  <meta property="og:title" content="iSCode - Desenvolvimento Web Full-Stack | React & Next.js" />
   <meta property="og:description"
-    content="Sua parceira em transformar linhas de código em experiências digitais incríveis. React, Next.js, Java, Spring Boot e mais!" />
+    content="Desenvolvimento de aplicações web e mobile de alto desempenho. Especialistas em React, Next.js, Java e Spring Boot." />
   <meta property="og:image" content="https://iscode.vercel.app/logo-iscode.png" />
   <meta property="og:image:secure_url" content="https://iscode.vercel.app/logo-iscode.png" />
+  <meta property="og:image:alt" content="Logo da iSCode - Desenvolvimento Full-Stack" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:url" content="https://iscode.vercel.app" />
+  <meta property="og:url" content="https://iscode.vercel.app/" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
 
-  <!-- Twitter Card -->
+  <!-- Twitter Card otimizado -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@iSCode" />
-  <meta name="twitter:title" content="iSCode | Soluções Web & Desenvolvimento Full-Stack" />
+  <meta name="twitter:creator" content="@iSCode" />
+  <meta name="twitter:title" content="iSCode - Desenvolvimento Web Full-Stack" />
   <meta name="twitter:description"
-    content="Transformamos ideias em aplicações web robustas usando as tecnologias mais modernas." />
+    content="Desenvolvimento de aplicações web e mobile de alto desempenho com React, Next.js, Java e Spring Boot." />
   <meta name="twitter:image" content="https://iscode.vercel.app/logo-iscode.png" />
-  <meta name="twitter:image:src" content="https://iscode.vercel.app/logo-iscode.png" />
+  <meta name="twitter:image:alt" content="Logo da iSCode" />
 
-  <!-- Canonical (evita conteúdo duplicado) -->
-  <link rel="canonical" href="https://iscode.vercel.app" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://iscode.vercel.app/" />
 
-  <!-- JSON-LD para Organização -->
+  <!-- Preconnect para performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Favicon completo -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/iscode2.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/iscode2.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/iscode2.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- JSON-LD - Organization (melhorado) -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "iSCode",
-      "url": "https://iscode.vercel.app",
-      "logo": "https://iscode.vercel.app/logo-iscode.png",
-      "sameAs": [
-        "https://www.threads.com/@is.codess",
-        "https://www.instagram.com/is.codess"
-      ],
-      "description": "Agência de desenvolvimento full-stack especializada em React, Next.js, Java, Spring Boot e automação de código."
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "iSCode",
+    "alternateName": "iSCode Development",
+    "url": "https://iscode.vercel.app",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://iscode.vercel.app/logo-iscode.png",
+      "width": 1200,
+      "height": 630
+    },
+    "description": "Agência de desenvolvimento full-stack especializada em React, Next.js, Java, Spring Boot e soluções web personalizadas.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Feira de Santana",
+      "addressRegion": "BA",
+      "addressCountry": "BR"
+    },
+    "sameAs": [
+      "https://www.threads.com/@is.codess",
+      "https://www.instagram.com/is.codess"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "availableLanguage": ["Portuguese", "English"]
     }
-    </script>
+  }
+  </script>
 
-  <link rel="icon" type="image/svg+xml" href="/iscode2.png" />
+  <!-- JSON-LD - WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "iSCode",
+    "url": "https://iscode.vercel.app",
+    "description": "Desenvolvimento web full-stack com as melhores tecnologias do mercado",
+    "inLanguage": "pt-BR",
+    "publisher": {
+      "@type": "Organization",
+      "name": "iSCode"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD - ProfessionalService -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "iSCode",
+    "image": "https://iscode.vercel.app/logo-iscode.png",
+    "url": "https://iscode.vercel.app",
+    "telephone": "",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Feira de Santana",
+      "addressRegion": "BA",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -12.2664,
+      "longitude": -38.9663
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://www.threads.com/@is.codess",
+      "https://www.instagram.com/is.codess"
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="/src/index.css">
 </head>
 
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+
+  <!-- Noscript para acessibilidade e SEO -->
+  <noscript>
+    <div style="padding: 20px; text-align: center;">
+      <h1>iSCode - Desenvolvimento Web Full-Stack</h1>
+      <p>Para melhor experiência, por favor habilite o JavaScript no seu navegador.</p>
+    </div>
+  </noscript>
 </body>
 
 </html>
